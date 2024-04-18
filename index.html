@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recetas de Cocina</title>
+    <link
+      rel="shortcut icon"
+      href="static/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Enlaces a hojas de estilo CSS -->
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="estilo-body">
+    <div id="subir"></div>
+    <header>
+      <div class="logo-header">
+        <a href="index.html"><img src="static/img/logo00.svg" alt="logo" /></a>
+        <h1>Cocinando en Equipo</h1>
+      </div>
+
+      <div id="logo-subir">
+        <a href="#subir"
+          ><i
+            class="fa-solid fa-circle-arrow-up fa-beat fa-2xl"
+            style="color: #218b04"
+          ></i
+        ></a>
+      </div>
+
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="menu-icon"> <img src="static/img/menu.svg" alt="" /></i>
+        </label>
+        <ul id="menu-principal">
+          <!-- <li><a href="index.html">Inicio</a></li> -->
+          <li><a href="index.html#recetas">Recetas</a></li>
+          <li><a href="index.html#categorias">Categorías</a></li>
+          <li><a href="testimonios.html">Testimonios</a></li>
+          <li><a href="quienesomos.html">Sobre Nosotros</a></li>
+          <li id="borde-lista-derecha"><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- RECETAS por Categorias -->
+      <section id="categorias" class="container">
+        <h2>Recetas por Categorías</h2>
+        <div class="tarjetas-cat">
+          <a href="#">
+            <div class="tarjeta-cat">
+              <img src="static/img/categorias/aperitivos.jpg" alt="" />
+              <div class="overlay-cat">
+                <h3>Entradas y Aperitivos</h3>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="tarjeta-cat">
+              <img
+                class="imagen-tarjeta"
+                src="static/img/categorias/postres.jpg"
+                alt=""
+              />
+              <div class="overlay-cat">
+                <h3>Postres</h3>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="tarjeta-cat">
+              <img
+                class="imagen-tarjeta"
+                src="static/img/categorias/sin-gluten.jpg"
+                alt=""
+              />
+              <div class="overlay-cat">
+                <h3>Comidas sin gluten</h3>
+              </div>
+            </div>
+          </a>
+          <!-- --- -->
+          <a href="#">
+            <div class="tarjeta-cat">
+              <img
+                class="imagen-tarjeta"
+                src="static/img/categorias/pizzas.jpeg"
+                alt=""
+              />
+              <div class="overlay-cat">
+                <h3>Platos principales</h3>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="tarjeta-cat">
+              <img
+                class="imagen-tarjeta"
+                src="static/img/categorias/bebidas.jpg"
+                alt=""
+              />
+              <div class="overlay-cat">
+                <h3>Bebidas</h3>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="tarjeta-cat">
+              <img
+                class="imagen-tarjeta"
+                src="static/img/categorias/comida-saludable.jpg"
+                alt=""
+              />
+              <div class="overlay-cat">
+                <h3>Comida saludable</h3>
+              </div>
+            </div>
+          </a>
+          <!-- --- -->
+          <a href="#">
+            <div class="tarjeta-cat">
+              <img
+                class="imagen-tarjeta"
+                src="static/img/categorias/ensaladas.jpg"
+                alt=""
+              />
+              <div class="overlay-cat">
+                <h3>Ensaladas</h3>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="tarjeta-cat">
+              <img
+                class="imagen-tarjeta"
+                src="static/img/categorias/desayuno.jpg"
+                alt=""
+              />
+              <div class="overlay-cat">
+                <h3>Desayuno y brunch</h3>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="tarjeta-cat">
+              <img
+                class="imagen-tarjeta"
+                src="static/img/categorias/comida-rapida.jpg"
+                alt=""
+              />
+              <div class="overlay-cat">
+                <h3>Comida rápida</h3>
+              </div>
+            </div>
+          </a>
+          <!-- --- -->
+          <a href="#">
+            <div class="tarjeta-cat">
+              <img
+                class="imagen-tarjeta"
+                src="static/img/categorias/sopas.jpg"
+                alt=""
+              />
+              <div class="overlay-cat">
+                <h3>Sopas y cremas</h3>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="tarjeta-cat">
+              <img
+                class="imagen-tarjeta"
+                src="static/img/categorias/comida-vegetariana.jpg"
+                alt=""
+              />
+              <div class="overlay-cat">
+                <h3>Comida vegetariana</h3>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="tarjeta-cat">
+              <img
+                class="imagen-tarjeta"
+                src="static/img/categorias/comida-tradicional.jpg"
+                alt=""
+              />
+              <div class="overlay-cat">
+                <h3>Comida tradicional</h3>
+              </div>
+            </div>
+          </a>
+          <!-- --- -->
+          <a href="#">
+            <div class="tarjeta-cat">
+              <img
+                class="imagen-tarjeta"
+                src="static/img/categorias/guarniciones.jpg"
+                alt=""
+              />
+              <div class="overlay-cat">
+                <h3>Guarniciones</h3>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="tarjeta-cat">
+              <img
+                class="imagen-tarjeta"
+                src="static/img/categorias/comida-vegana.jpg"
+                alt=""
+              />
+              <div class="overlay-cat">
+                <h3>Comida vegana</h3>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="tarjeta-cat">
+              <img
+                class="imagen-tarjeta"
+                src="static/img/categorias/comida-internacional.jpg"
+                alt=""
+              />
+              <div class="overlay-cat">
+                <h3>Comida internacional</h3>
+              </div>
+            </div>
+          </a>
+          <!-- --- -->
+        </div>
+      </section>
+
+      <!-- RECETAS Populares -->
+      <section id="populares" class="container">
+        <h2>Recetas Populares</h2>
+        <div class="tarjetas-pop">
+          <div class="columna-pop">
+            <div class="titulo-pop">Recetas para tod@s</div>
+            <div class="tarjeta-pop">
+              <a href="#">
+                <img src="static/img/populares/carbonara.jpg" alt="" />
+                <div class="overlay-pop">
+                  <h3>Espaguetis a la carbonara</h3>
+                  <p>panceta, parmesano, ajo y albahaca</p>
+                  <div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="tarjeta-pop">
+              <a href="#">
+                <img src="static/img/populares/ensalada-cesar.jpg" alt="" />
+                <div class="overlay-pop">
+                  <h3>Ensalada César</h3>
+                  <p>Lechuga, parmesano, limon, vinagre</p>
+                  <div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="tarjeta-pop">
+              <a href="#">
+                <img src="static/img/populares/hamburguesa-casera.jpg" alt="" />
+                <div class="overlay-pop">
+                  <h3>Hamburguesas caseras</h3>
+                  <p>Carne, verdeo, pimentón, ajo, perejil</p>
+                  <div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="columna-pop">
+            <div class="titulo-pop">Recetas Veganas</div>
+            <div class="tarjeta-pop">
+              <a href="#">
+                <img src="static/img/populares/rissoto.jpg" alt="" />
+                <div class="overlay-pop">
+                  <h3>Risotto de Champiñones</h3>
+                  <p>Arroz, champiñones, ajo, vino blanco</p>
+                  <div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="tarjeta-pop">
+              <a href="#">
+                <img src="static/img/populares/lasagna.jpg" alt="" />
+                <div class="overlay-pop">
+                  <h3>Lasaña Vegana</h3>
+                  <p>Cebolla, ajo, calabacín, zanahorias</p>
+                  <div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="tarjeta-pop">
+              <a href="#">
+                <img src="static/img/populares/curry.avif" alt="" />
+                <div class="overlay-pop">
+                  <h3>Lentejas al Curry</h3>
+                  <p>Lentejas, cebolla, papa, ajo, curry</p>
+                  <div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="columna-pop">
+            <div class="titulo-pop">Recetas Vegetarianas</div>
+            <div class="tarjeta-pop">
+              <a href="#">
+                <img src="static/img/populares/hummus.jpg" alt="" />
+                <div class="overlay-pop">
+                  <h3>Hummus de garbanzos</h3>
+                  <p>Garbanzos, ajo, oliva, sésamo, limón</p>
+                  <div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="tarjeta-pop">
+              <a href="#">
+                <img src="static/img/populares/ensalada-quinoa.jpg" alt="" />
+                <div class="overlay-pop">
+                  <h3>Ensalada de Quinoa</h3>
+                  <p>Quinoa, espárragos, habas, rabanitos, peregil</p>
+                  <div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="tarjeta-pop">
+              <a href="#">
+                <img src="static/img/populares/tacos.jpg" alt="" />
+                <div class="overlay-pop">
+                  <h3>Tacos con frijoles negros</h3>
+                  <p>cebolla, ajo, frijoles, oliva</p>
+                  <div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RECETA Estrella -->
+      <section id="estrella" class="container">
+        <h2>Receta Estrella</h2>
+        <div id="receta-estrella">
+          <a href="descripcion-recetas/Receta-estrella.html">
+            <div class="tarjeta-est">
+              <img src="static/img/estrella/panqueques.jpg" alt="" />
+              <div class="overlay">
+                <h3 class="texto-tarjeta">Panqueques o Crepés</h3>
+              </div>
+            </div>
+          </a>
+          <!-- Aquí va la receta estrella -->
+        </div>
+      </section>
+
+      <!-- RECETA Destacada -->
+      <section id="destacadas" class="container">
+        <h2>Recetas Destacadas</h2>
+        <div id="recetas-destacadas">
+          <!-- Aquí irían las recetas destacadas -->
+        </div>
+      </section>
+
+      <!-- Buscador -->
+      <section id="buscar-recetas" class="container">
+        <!-- <section id="buscar-recetas"> -->
+        <h2>Buscar Recetas</h2>
+        <!-- Formulario de búsqueda -->
+        <form action="buscar.php" method="GET" class="buscar-formulario">
+          <input type="text" name="q" placeholder="Buscar recetas..." />
+          <button type="submit">Buscar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <section class="grid-footer section-footer">
+        <div class="grid-item contacto">
+          <h2>Contacto</h2>
+          <p>Email: contacto@recetasdecocina.com</p>
+          <p>Teléfono: 123-456-789</p>
+        </div>
+
+        <div class="grid-item redes-sociales">
+          <h2>Síguenos en Redes Sociales</h2>
+          <!-- Enlaces a redes sociales -->
+          <a href="#"
+            ><img src="static/img/iconSN/twitter.png" alt="Twitter"
+          /></a>
+          <a href="#"
+            ><img src="static/img/iconSN/instagram.png" alt="Instagram"
+          /></a>
+          <a href="#"
+            ><img src="static/img/iconSN/facebook.png" alt="Facebook"
+          /></a>
+          <a href="#"
+            ><img src="static/img/iconSN/tik-tok.png" alt="TikTok"
+          /></a>
+        </div>
+        <div class="grid-item derechos">
+          <p>&copy; 2024 Recetas de Cocina. Todos los derechos reservados.</p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

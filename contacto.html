@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recetas de Cocina</title>
+    <link
+      rel="shortcut icon"
+      href="static/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Enlaces a hojas de estilo CSS -->
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="estilo-body">
+    <header>
+      <div id="subir"></div>
+      <div class="logo-header">
+        <a href="index.html"><img src="static/img/logo00.svg" alt="logo" /></a>
+        <h1>Cocinando en Equipo</h1>
+      </div>
+
+      <div id="logo-subir">
+        <a href="#subir"
+          ><i
+            class="fa-solid fa-circle-arrow-up fa-beat fa-2xl"
+            style="color: #218b04"
+          ></i
+        ></a>
+      </div>
+
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="menu-icon"> <img src="static/img/menu.svg" alt="" /></i>
+        </label>
+        <ul id="menu-principal">
+          <!-- <li><a href="index.html">Inicio</a></li> -->
+          <li><a href="index.html#recetas">Recetas</a></li>
+          <li><a href="index.html#categorias">Categorías</a></li>
+          <li><a href="testimonios.html">Testimonios</a></li>
+          <li><a href="quienesomos.html">Sobre Nosotros</a></li>
+          <li id="borde-lista-derecha"><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main style="line-height: 1.5">
+      <section id="sobre-nosotros" class="container">
+        <h2>Formulario de Contacto</h2>
+        <h3
+          style="
+            color: yellow;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+              1px 1px 0 black;
+            font-weight: bold;
+          "
+        >
+          Complete sus datos y le responderemos a la brevedad
+        </h3>
+
+        <form id="contactForm" onsubmit="return validateForm()">
+          <div class="form-group">
+            <section class="form-name">
+              <label
+                for="name"
+                style="
+                  font-weight: bold;
+                  color: yellow;
+                  text-shadow: -1px -1px 0 black, 1px -1px 0 black,
+                    -1px 1px 0 black, 1px 1px 0 black;
+                "
+                >Nombre:</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Nombre y Apellido"
+                required
+              />
+            </section>
+          </div>
+
+          <div class="form-group">
+            <section class="form-email">
+              <label
+                for="email"
+                style="
+                  font-weight: bold;
+                  color: yellow;
+                  text-shadow: -1px -1px 0 black, 1px -1px 0 black,
+                    -1px 1px 0 black, 1px 1px 0 black;
+                "
+                >Correo electrónico:</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Direccion de correo"
+                required
+              />
+            </section>
+          </div>
+
+          <div class="form-group">
+            <section class="form-message">
+              <label
+                for="message"
+                style="
+                  font-weight: bold;
+                  color: yellow;
+                  text-shadow: -1px -1px 0 black, 1px -1px 0 black,
+                    -1px 1px 0 black, 1px 1px 0 black;
+                "
+                >Mensaje:</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                cols="50"
+                placeholder="Escriba su mensaje aquí"
+                required
+              ></textarea>
+            </section>
+          </div>
+
+          <div class="form-group">
+            <section class="form-motivo">
+              <label
+                for="motivo"
+                style="
+                  font-weight: bold;
+                  color: yellow;
+                  text-shadow: -1px -1px 0 black, 1px -1px 0 black,
+                    -1px 1px 0 black, 1px 1px 0 black;
+                "
+                >Motivo:</label
+              >
+              <select id="motivo" name="motivo" required>
+                <option value="">Seleccione el motivo</option>
+                <option value="recetas">Consultas sobre recetas</option>
+                <option value="ingredientes">
+                  Consultas sobre Ingredientes
+                </option>
+                <option value="nueva">Sugerir una receta</option>
+                <option value="sugerencias">Comentarios y sugerencias</option>
+                <option value="otros">Otros Motivos</option>
+              </select>
+            </section>
+          </div>
+
+          <div class="form-group">
+            <label
+              >¿Cómo calificarías tu experiencia en nuestro sitio web?</label
+            >
+            <input
+              type="radio"
+              id="muy_satisfecho"
+              name="experiencia"
+              value="muy_satisfecho"
+            />
+            <label for="muy_satisfecho">Muy satisfecho</label>
+
+            <input
+              type="radio"
+              id="satisfecho"
+              name="experiencia"
+              value="satisfecho"
+            />
+            <label for="satisfecho">Satisfecho</label>
+
+            <input
+              type="radio"
+              id="neutral"
+              name="experiencia"
+              value="neutral"
+            />
+            <label for="neutral">Neutral</label>
+
+            <input
+              type="radio"
+              id="insatisfecho"
+              name="experiencia"
+              value="insatisfecho"
+            />
+            <label for="insatisfecho">Insatisfecho</label>
+
+            <input
+              type="radio"
+              id="muy_insatisfecho"
+              name="experiencia"
+              value="muy_insatisfecho"
+            />
+            <label for="muy_insatisfecho">Muy insatisfecho</label>
+          </div>
+
+          <div class="form-group">
+            <label for="suscripcion">Suscribirse:</label>
+            <input
+              type="checkbox"
+              id="suscripcion"
+              name="suscripcion"
+              value="si"
+            />
+            <label for="suscripcion">Deseo recibir correos electrónicos</label>
+          </div>
+
+          <div class="form-group">
+            <section class="form-button">
+              <input type="submit" value="Enviar" />
+              <button type="button" onclick="clearForm()">Borrar</button>
+            </section>
+          </div>
+        </form>
+
+        <script>
+          function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            var motivo = document.getElementById("motivo").value;
+
+            if (name == "" || email == "" || message == "" || motivo == "") {
+              alert("Todos los campos son obligatorios.");
+              return false;
+            }
+            return true;
+          }
+        </script>
+      </section>
+    </main>
+
+    <footer>
+      <section class="grid-footer section-footer">
+        <div class="grid-item contacto">
+          <h2>Contacto</h2>
+          <p>Email: contacto@recetasdecocina.com</p>
+          <p>Teléfono: 123-456-789</p>
+        </div>
+
+        <div class="grid-item redes-sociales">
+          <h2>Síguenos en Redes Sociales</h2>
+          <!-- Enlaces a redes sociales -->
+          <a href="#"
+            ><img src="static/img/iconSN/twitter.png" alt="Twitter"
+          /></a>
+          <a href="#"
+            ><img src="static/img/iconSN/instagram.png" alt="Instagram"
+          /></a>
+          <a href="#"
+            ><img src="static/img/iconSN/facebook.png" alt="Facebook"
+          /></a>
+          <a href="#"
+            ><img src="static/img/iconSN/tik-tok.png" alt="TikTok"
+          /></a>
+        </div>
+        <div class="grid-item derechos">
+          <p>&copy; 2024 Recetas de Cocina. Todos los derechos reservados.</p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

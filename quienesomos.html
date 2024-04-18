@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recetas de Cocina</title>
+    <link
+      rel="shortcut icon"
+      href="static/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Enlaces a hojas de estilo CSS -->
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="estilo-body">
+    <header>
+      <div id="subir"></div>
+      <div class="logo-header">
+        <a href="index.html"><img src="static/img/logo00.svg" alt="logo" /></a>
+        <h1>Cocinando en Equipo</h1>
+      </div>
+
+      <div id="logo-subir">
+        <a href="#subir"
+          ><i
+            class="fa-solid fa-circle-arrow-up fa-beat fa-2xl"
+            style="color: #218b04"
+          ></i
+        ></a>
+      </div>
+
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="menu-icon"> <img src="static/img/menu.svg" alt="" /></i>
+        </label>
+        <ul id="menu-principal">
+          <!-- <li><a href="index.html">Inicio</a></li> -->
+          <li><a href="index.html#recetas">Recetas</a></li>
+          <li><a href="index.html#categorias">Categorías</a></li>
+          <li><a href="testimonios.html">Testimonios</a></li>
+          <li><a href="quienesomos.html">Sobre Nosotros</a></li>
+          <li id="borde-lista-derecha"><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="sobre-nosotros" class="container">
+        <div>
+          <h2>Sobre Nosotros</h2>
+          <p>
+            Somos un grupo de estudiantes apasionados por la cocina y la
+            programación. Hemos creado esta página web de recetas con el
+            objetivo de ofrecer una plataforma gratuita y de código abierto
+            donde cualquiera pueda acceder a recetas deliciosas y contribuir con
+            sus propias creaciones. ¡Únete a nuestra comunidad y descubre el
+            placer de cocinar y programar juntos!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section class="grid-footer section-footer">
+        <div class="grid-item contacto">
+          <h2>Contacto</h2>
+          <p>Email: contacto@recetasdecocina.com</p>
+          <p>Teléfono: 123-456-789</p>
+        </div>
+
+        <div class="grid-item redes-sociales">
+          <h2>Síguenos en Redes Sociales</h2>
+          <!-- Enlaces a redes sociales -->
+          <a href="#"
+            ><img src="static/img/iconSN/twitter.png" alt="Twitter"
+          /></a>
+          <a href="#"
+            ><img src="static/img/iconSN/instagram.png" alt="Instagram"
+          /></a>
+          <a href="#"
+            ><img src="static/img/iconSN/facebook.png" alt="Facebook"
+          /></a>
+          <a href="#"
+            ><img src="static/img/iconSN/tik-tok.png" alt="TikTok"
+          /></a>
+        </div>
+        <div class="grid-item derechos">
+          <p>&copy; 2024 Recetas de Cocina. Todos los derechos reservados.</p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

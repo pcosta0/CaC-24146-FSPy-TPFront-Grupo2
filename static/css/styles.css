@@ -1,0 +1,800 @@
+/* Definicion de colores comunes */
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --bg-color: #3b3b3b;
+  --header-bg: #292929;
+  --footer-bg: #e7a412;
+  --menu-bg: #d39613;
+  --menu-bg2: #cc992c;
+
+  --third-color: #db4648;
+  --third-bis-color: #db4648f2;
+  --bg-input-color: #4f31572c;
+
+  --tarjeta-radius: 6px;
+}
+
+/* Valores por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-decoration: none;
+  list-style-type: none;
+  list-style: none;
+
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* Estilos generales */
+.estilo-body {
+  /* font-family: Arial, sans-serif; */
+  background-image: url("../img/fondo1.jpg");
+  /* Ruta a tu imagen de fondo */
+  background-position: center;
+  /* Centra la imagen */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  background-size: cover;
+  /* Ajusta la imagen al tamaño de la ventana del navegador */
+}
+
+/* #subir {
+  z-index: -999;
+  height: 10px;
+} */
+
+/* ---------- Header ---------- */
+header {
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  color: var(--secondary-color);
+  background-color: var(--header-bg);
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+#logo-subir a i {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  color: #647061;
+}
+
+header h1 {
+  /* font-size: 3vw; */
+  font-size: min(max(16px, 4vw), 22px);
+}
+/* contenedor de logo */
+.logo-header {
+  display: flex;
+  align-items: center;
+}
+
+/* imagen de logo */
+.logo-header img {
+  width: 45px;
+  margin-right: 8px;
+}
+
+#logo-subir {
+  display: flex;
+  justify-content: right;
+  z-index: 99;
+  position: fixed;
+  /* top, left, right, están puestos acá para que funcione el flexbox con fixed */
+  top: 35px;
+  left: 0;
+  right: 40px;
+}
+
+/* ---------- Menu ---------- */
+/* lista de menu */
+nav ul {
+  display: flex;
+  align-items: center;
+  margin-left: 3.4rem;
+  margin-bottom: 0.3rem;
+}
+
+/* elementos de menu */
+nav li {
+  color: var(--secondary-color);
+  padding: 0 15px;
+  border-left: 1px solid var(--secondary-color);
+}
+
+nav li:last-child {
+  border-right: 1px solid var(--secondary-color);
+}
+
+nav li:hover {
+  background-color: var(--menu-bg2);
+}
+
+/* links de menu */
+nav a {
+  text-transform: capitalize;
+  color: var(--secondary-color);
+}
+
+/* icono de menu */
+.menu-icon img {
+  width: 35px;
+}
+
+/* icono hamburguesa oculto por defecto */
+.menu-icon,
+#check {
+  display: none;
+}
+
+/* --------------- container --------------- */
+.container {
+  background-color: rgba(220, 220, 220, 0.26);
+  /* background-color: rgba(184, 47, 47, 0.6); */
+  margin: 5px 5px 0px;
+  padding: 15px 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+}
+
+.container h2 {
+  color: rgb(255, 187, 0);
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  padding-bottom: 20px;
+}
+
+/* --------------- Categorias --------------- */
+.tarjetas-cat {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  justify-content: center;
+  color: #ffffff;
+  gap: 10px;
+}
+
+.tarjetas-cat a {
+  color: #ffffff;
+}
+
+.tarjeta-cat {
+  width: 200px;
+  height: 65px;
+  border-radius: var(--tarjeta-radius);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-cat:hover img {
+  transform: scale(1.1);
+}
+
+.tarjeta-cat img {
+  width: 220%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  scale: 1;
+  border-radius: var(--tarjeta-radius);
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.overlay-cat {
+  width: 100%;
+  opacity: 1;
+  background: linear-gradient(transparent 10%, rgba(43, 43, 42, 0.822) 90%);
+  border-radius: var(--tarjeta-radius);
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 40px;
+  text-align: center;
+}
+
+.overlay-cat h3 {
+  font-weight: 600;
+  font-size: 15px;
+  text-shadow: 0 0 10px #000, 0 0 15px #000, /* 0 0 20px #000, */ 0 0 25px #000;
+}
+
+/* -------- Tarjetas de Recetas Populares-------- */
+.tarjetas-pop {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  color: #ffffff;
+  gap: 10px;
+}
+
+.tarjetas-pop a {
+  color: #ffffff;
+}
+
+.columna-pop {
+  width: 100%;
+  background-color: #ffffff99;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  backdrop-filter: blur(7px);
+}
+
+.titulo-pop {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #000;
+}
+
+.tarjeta-pop {
+  background-color: #cc992c;
+  width: 100%;
+  height: 100px;
+  border-radius: var(--tarjeta-radius);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-pop:hover img {
+  transform: scale(1.1);
+}
+
+.tarjeta-pop img {
+  margin-left: -30%;
+  width: 220%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  scale: 1;
+  border-radius: var(--tarjeta-radius);
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.overlay-pop .checked {
+  color: orange;
+}
+
+.overlay-pop {
+  height: 100%;
+  width: 90%;
+  background: linear-gradient(90deg, transparent 10%, rgb(0, 0, 0) 40%);
+  border-radius: var(--tarjeta-radius);
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 4% 3% 1% 35%;
+  text-align: center;
+  font-size: 12px;
+  gap: 3px;
+}
+
+.overlay-pop h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #000, 0 0 15px #000, /* 0 0 20px #000, */ 0 0 25px #000;
+}
+
+/* ---------- Receta estrella ----------- */
+.tarjeta-est img {
+  /* margin-left: -30%; */
+  /* width: 250px; */
+  width: 220%;
+  /* height: 200px; */
+  height: auto;
+  max-width: 100%;
+  /* Evita que la imagen se extienda más allá de su tamaño original */
+  max-height: 100%;
+  /* Evita que la imagen se extienda más allá de su tamaño original */
+  /* scale: 1.3; */
+  border-radius: var(--tarjeta-radius);
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+/* ------------------------------ */
+
+main {
+  padding: 0px;
+}
+
+main h2 {
+  color: yellow;
+  /* Relleno amarillo */
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+  /* Contorno negro */
+}
+
+.recetas-categorias ul li a:hover {
+  background-color: #fbb6b6;
+  /* Fondo rosado claro al pasar el mouse */
+  color: #646363;
+  /* Color de texto gris oscuro al pasar el mouse */
+}
+
+/* FOOTER CON GRID E ICONOS SN */
+footer {
+  color: #333;
+  /* Color de texto */
+  padding: 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  /* Fuente Roboto */
+}
+/* Footer con CSS Grid */
+footer {
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  /* Fuente Roboto */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* 12 columnas de tamaño igual */
+  gap: 20px;
+  /* Espacio entre las secciones */
+}
+/* Estilos para las secciones del footer */
+.section-footer {
+  grid-column: 1 / -1;
+  /* Ocupa todas las columnas disponibles */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  /* Espacio entre las secciones */
+}
+
+.contacto,
+.redes-sociales,
+.derechos {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(97, 95, 95, 0.5);
+  /* Fondo gris semi-transparente */
+  color: white;
+  /* Color del texto blanco */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  /* Efecto de brillo */
+}
+
+.contacto h2,
+.redes-sociales h2,
+.derechos h2 {
+  margin-top: 0;
+  /* Eliminar margen superior */
+}
+
+.contacto,
+.redes-sociales,
+.derechos {
+  font-size: 1.1em;
+  /* Ajusta el tamaño del texto según tus preferencias */
+  color: rgb(9, 9, 9);
+  /* Color del texto blanco */
+  font-weight: bold;
+}
+
+.redes-sociales a {
+  display: inline-block;
+  margin: 0 5px;
+  /* Espacio entre enlaces */
+  color: #020202;
+}
+
+.redes-sociales a:hover {
+  color: #ef3311;
+  /* Cambiar color al pasar el mouse */
+}
+/* Redefinir el tamaño de los iconos de redes sociales */
+.redes-sociales a img {
+  width: 30px; /* Ajusta el ancho de los iconos */
+  height: auto; /* Mantiene la proporción de aspecto */
+}
+
+/* Centrar los iconos de redes sociales */
+.redes-sociales {
+  justify-content: center; /* Centra horizontalmente */
+}
+
+/* Eliminar el espacio entre los iconos de redes sociales */
+.redes-sociales a {
+  margin: 0 10px; /* Reduce el espacio horizontal entre los iconos */
+}
+
+#sobre-nosotros,
+#contacto,
+#redes-sociales {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  /* Bordes redondeados */
+  background-color: rgba(97, 95, 95, 0.5);
+  /* Fondo gris semi-transparente */
+  color: white;
+  /* Color del texto blanco */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  /* Efecto de brillo */
+}
+
+#sobre-nosotros h2,
+#contacto h2,
+#redes-sociales h2 {
+  margin-top: 0;
+  /* Eliminar margen superior */
+}
+
+#sobre-nosotros {
+  font-size: 1.1em;
+  /* Ajusta el tamaño del texto según tus preferencias */
+  color: rgb(9, 9, 9);
+  /* Color del texto blanco */
+  font-weight: bold;
+}
+
+#redes-sociales a {
+  display: inline-block;
+  margin: 0 5px;
+  /* Espacio entre enlaces */
+  color: #020202;
+}
+
+#redes-sociales a:hover {
+  color: #ef3311;
+  /* Cambiar color al pasar el mouse */
+}
+
+#derechos {
+  font-size: 0.9em;
+  /* Ajusta el tamaño del texto según tus preferencias */
+  color: rgb(14, 13, 7);
+  /* Color del texto blanco */
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  /* Usando Nunito como la fuente principal */
+}
+
+/* Estilos CSS para la galería de testimonios */
+.testimonial {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.testimonial img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 2px solid black;
+  /* Añade un borde negro fino */
+}
+
+.testimonial p {
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 400px;
+  /* Ancho máximo del párrafo */
+  margin: 0;
+  /* Eliminar los márgenes predeterminados */
+  padding: 10px;
+  /* Agregar espacio interno */
+  background-color: #f9f9f9;
+  /* Color de fondo para resaltar */
+  border-radius: 10px;
+  /* Bordes redondeados */
+}
+
+/* Estilos para el formulario de contacto con clases */
+.form-name input[type="text"] {
+  position: absolute;
+  top: 225px;
+  right: 709px;
+  width: 350px;
+}
+
+.form-email input[type="email"] {
+  position: absolute;
+  top: 250px;
+  right: 709px;
+  width: 350px;
+}
+
+.form-message textarea {
+  /* Corregido a .form-message textarea */
+  position: absolute;
+  top: 275px;
+  right: 709px;
+  width: 350px;
+}
+
+.form-motivo select {
+  position: absolute;
+  top: 348px;
+  right: 709px;
+  width: 350px;
+}
+
+.form-button input[type="submit"],
+.form-button button[type="button"] {
+  background-color: #ffffff;
+  /* Fondo blanco */
+  border: 1px solid #000000;
+  /* Borde negro */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  padding: 10px 20px;
+  /* Espaciado interno */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  /* Sombra para el efecto relieve */
+  cursor: pointer;
+  /* Cambia el cursor al pasar por encima */
+  font-weight: bold;
+  /* Texto en negrita */
+  color: #000000;
+  /* Color del texto */
+  transition: all 0.3s ease;
+  /* Transición suave */
+}
+
+/* Estilos para el hover (cuando el cursor pasa por encima) */
+.form-button input[type="submit"]:hover,
+.form-button button[type="button"]:hover {
+  background-color: #f2f2f2;
+  /* Cambia el fondo a un tono más claro */
+}
+
+#contactForm {
+}
+
+.datos-form {
+}
+
+.mensaje-form {
+}
+
+.select-form {
+}
+
+.check-form {
+}
+
+.btn {
+}
+
+/* ---------------------------------- */
+/* Responsive tablet                  */
+/* ---------------------------------- */
+@media (max-width: 768px) {
+  /* ---------- Header ---------- */
+  header {
+    /* z-index: 999; */
+    /* background-color: var(--header-bg); */
+    /* color: var(--primary-color); */
+    /* background-color: orange; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+
+  /* checkbox menu */
+  .checkbtn {
+    display: block;
+  }
+
+  /* icono hamburguesa */
+  .menu-icon {
+    display: block;
+    /* position: fixed; */
+    /* top: 20px;
+        right: 20px; */
+    cursor: pointer;
+  }
+
+  /* ---------- Menu ---------- */
+  /* contenedor de menu */
+  nav ul {
+    z-index: 999;
+    display: block;
+    position: fixed;
+    /* top: -50%; */
+    left: 100%;
+    background: var(--header-bg);
+    width: 100%;
+    /* height: 100vh; */
+    right: 100px;
+    margin-left: 0;
+  }
+
+  /* elementos de menu */
+  nav li:hover {
+    background-color: var(--menu-bg2);
+  }
+
+  nav li:hover a {
+    color: var(--primary-color);
+  }
+
+  nav ul li {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    border: 0;
+  }
+
+  nav ul li:last-child {
+    border: 0;
+  }
+
+  /* links de menu */
+  nav a {
+    color: var(--secondary-color);
+  }
+
+  /* transicion de menu */
+  #check:checked ~ ul {
+    top: 65px;
+    left: 0;
+    transition: all 0.25s;
+  }
+
+  /* ---------- Footer ---------- */
+}
+
+/* ---------------------------------- */
+/* Responsive Celular                 */
+/* ---------------------------------- */
+@media (max-width: 480px) {
+  /* ---------- Header ---------- */
+  header {
+    /* z-index: 999; */
+    /* background-color: red; */
+    /* color: var(--primary-color); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    /* font-size: 0.8rem; */
+  }
+
+  /* checkbox menu */
+  .checkbtn {
+    display: block;
+  }
+
+  /* icono hamburguesa */
+  .menu-icon {
+    display: block;
+    /* position: fixed; */
+    /* top: 20px;
+        right: 20px; */
+    cursor: pointer;
+  }
+
+  /* ---------- Menu ---------- */
+  /* contenedor de menu */
+  nav ul {
+    z-index: 999;
+    display: block;
+    position: fixed;
+    /* top: -50%; */
+    left: 100%;
+    background: var(--header-bg);
+    width: 100%;
+    /* height: 100vh; */
+    right: 100px;
+    margin-left: 0;
+  }
+
+  /* elementos de menu */
+  /* nav li:hover {
+    background-color: var(--menu-bg2);
+  } */
+
+  nav li:hover a {
+    color: var(--primary-color);
+  }
+
+  nav ul li {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    border: 0;
+  }
+
+  nav ul li:last-child {
+    border: 0;
+  }
+
+  /* links de menu */
+  nav a {
+    color: var(--secondary-color);
+  }
+
+  /* transicion de menu */
+  #check:checked ~ ul {
+    top: 65px;
+    left: 0;
+    transition: all 0.25s;
+  }
+
+  .container {
+    /* background-color: rgba(220, 220, 220, 0.26); */
+    /* background-color: rgba(184, 47, 47, 0.6); */
+    background-color: transparent;
+    margin: 0px auto 15px;
+    padding: 10px 10px;
+    backdrop-filter: none;
+  }
+
+  /* tarjeta */
+  .tarjeta-cat {
+    width: 100px;
+    height: 65px;
+    /* border-radius: 2px; */
+    /* border-radius: var(--tarjeta-radius);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3); */
+  }
+  .overlay-cat h3 {
+    font-size: 0.85rem;
+  }
+
+  /* ---------- Footer ---------- */
+}
+/* ---------------------------------------- */
+
+.texto-tarjeta {
+  color: #fff !important;
+}
+
+.estilo-body-recetas {
+  font-family: Arial, sans-serif;
+  background-image: url("../img/fondo1.jpg");
+  /* Ruta a tu imagen de fondo */
+  background-position: center;
+  /* Centra la imagen */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  background-size: cover;
+  /* Ajusta la imagen al tamaño de la ventana del navegador */
+}
+
+#mas-informacion {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
