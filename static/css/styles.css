@@ -5,8 +5,8 @@
   --bg-color: #3b3b3b;
   --header-bg: #292929;
   --footer-bg: #e7a412;
-  --menu-bg: #554625;
-  --menu-bg2: #a3740e;
+  --menu-bg: #b1801e;
+  --menu-bg2: #615f5b;
   --heading1: #ffbb00;
   --heading2: #f8e8bb;
   --text1: #fcfcfc;
@@ -70,7 +70,7 @@ header {
   position: fixed;
   bottom: 30px;
   right: 10px;
-  color: #647061;
+  color: #608f14;
 }
 
 header h1 {
@@ -266,6 +266,10 @@ nav a {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
+.tarjeta-pop p{
+  color: var(--text1);
+}
+
 .tarjeta-pop:hover img {
   transform: scale(1.1);
 }
@@ -329,7 +333,6 @@ nav a {
   object-fit: cover;
   transition: all 0.3s;
 }
-
 /* ------------------------------ */
 
 main {
@@ -441,7 +444,6 @@ footer {
 }
 
 /* -------------- Sobre nosotros -------------- */
-/* #sobre-nosotros, */
 .tarjetas-equipo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -462,11 +464,15 @@ footer {
   gap: 5px;
 }
 
+.tarjeta-equipo img {
+  border-radius: 7px;
+}
+
 .tarjeta-equipo p {
   color: var(--text1);
 }
-
 /* -------------------------------------------- */
+
 #contacto,
 #redes-sociales {
   padding: 20px;
