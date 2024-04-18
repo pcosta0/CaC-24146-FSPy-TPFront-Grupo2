@@ -440,7 +440,33 @@ footer {
   margin: 0 10px; /* Reduce el espacio horizontal entre los iconos */
 }
 
-#sobre-nosotros,
+/* -------------- Sobre nosotros -------------- */
+/* #sobre-nosotros, */
+.tarjetas-equipo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.tarjeta-equipo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  color: var(--heading1);
+  background-color: #222222;
+  border-radius: 15px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  gap: 5px;
+}
+
+.tarjeta-equipo p {
+  color: var(--text1);
+}
+
+/* -------------------------------------------- */
 #contacto,
 #redes-sociales {
   padding: 20px;
