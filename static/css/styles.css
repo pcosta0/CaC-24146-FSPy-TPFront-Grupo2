@@ -25,9 +25,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  text-decoration: none;
   list-style-type: none;
-  list-style: none;
 
   font-family: "Comfortaa", sans-serif;
   font-optical-sizing: auto;
@@ -35,9 +33,12 @@
   font-style: normal;
 }
 
+a {
+  color: var(--text2);
+}
+
 /* Estilos generales */
 .estilo-body {
-  /* font-family: Arial, sans-serif; */
   background-image: url("../img/fondo1.jpg");
   /* Ruta a tu imagen de fondo */
   background-position: center;
@@ -48,10 +49,9 @@
   /* Ajusta la imagen al tamaño de la ventana del navegador */
 }
 
-/* #subir {
+#subir {
   z-index: -999;
-  height: 10px;
-} */
+}
 
 /* ---------- Header ---------- */
 header {
@@ -60,7 +60,6 @@ header {
   top: 0;
   color: var(--secondary-color);
   background-color: var(--header-bg);
-  /* display: flex; */
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
@@ -78,6 +77,7 @@ header h1 {
   font-weight: 600;
   font-size: min(max(16px, 4vw), 22px);
 }
+
 /* contenedor de logo */
 .logo-header {
   display: flex;
@@ -142,10 +142,9 @@ nav a {
   display: none;
 }
 
-/* --------------- container --------------- */
+/* --------------- Container --------------- */
 .container {
   background-color: rgba(220, 220, 220, 0.26);
-  /* background-color: rgba(184, 47, 47, 0.6); */
   margin: 5px 5px 0px;
   padding: 15px 15px;
   border-radius: 10px;
@@ -222,7 +221,7 @@ nav a {
 .overlay-cat h3 {
   font-weight: 600;
   font-size: 15px;
-  text-shadow: 0 0 10px #000, 0 0 15px #000, /* 0 0 20px #000, */ 0 0 25px #000;
+  text-shadow: 0 0 10px #000, 0 0 15px #000, 0 0 25px #000;
 }
 
 /* -------- Tarjetas de Recetas Populares-------- */
@@ -266,7 +265,7 @@ nav a {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
-.tarjeta-pop p{
+.tarjeta-pop p {
   color: var(--text1);
 }
 
@@ -319,211 +318,19 @@ nav a {
 
 /* ---------- Receta estrella ----------- */
 .tarjeta-est img {
-  /* margin-left: -30%; */
-  /* width: 250px; */
-  width: 220%;
-  /* height: 200px; */
+  width: 50%;
   height: auto;
+  /* Evita que la imagen se extienda más allá de su tamaño original */
   max-width: 100%;
   /* Evita que la imagen se extienda más allá de su tamaño original */
   max-height: 100%;
-  /* Evita que la imagen se extienda más allá de su tamaño original */
-  /* scale: 1.3; */
+  scale: 1;
   border-radius: var(--tarjeta-radius);
   object-fit: cover;
   transition: all 0.3s;
 }
-/* ------------------------------ */
 
-main {
-  padding: 0px;
-}
-
-main h2 {
-  color: yellow;
-  /* Relleno amarillo */
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black;
-  /* Contorno negro */
-}
-
-.recetas-categorias ul li a:hover {
-  background-color: #fbb6b6;
-  /* Fondo rosado claro al pasar el mouse */
-  color: #646363;
-  /* Color de texto gris oscuro al pasar el mouse */
-}
-
-/* FOOTER CON GRID E ICONOS SN */
-footer {
-  color: #333;
-  /* Color de texto */
-  padding: 20px;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  /* Fuente Roboto */
-}
-/* Footer con CSS Grid */
-footer {
-  color: #333;
-  padding: 20px;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  /* Fuente Roboto */
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  /* 12 columnas de tamaño igual */
-  gap: 20px;
-  /* Espacio entre las secciones */
-}
-/* Estilos para las secciones del footer */
-.section-footer {
-  grid-column: 1 / -1;
-  /* Ocupa todas las columnas disponibles */
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  /* Espacio entre las secciones */
-}
-
-.contacto,
-.redes-sociales,
-.derechos {
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgba(97, 95, 95, 0.5);
-  /* Fondo gris semi-transparente */
-  color: white;
-  /* Color del texto blanco */
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
-  /* Efecto de brillo */
-}
-
-.contacto h2,
-.redes-sociales h2,
-.derechos h2 {
-  margin-top: 0;
-  /* Eliminar margen superior */
-}
-
-.contacto,
-.redes-sociales,
-.derechos {
-  font-size: 1.1em;
-  /* Ajusta el tamaño del texto según tus preferencias */
-  color: rgb(9, 9, 9);
-  /* Color del texto blanco */
-  font-weight: bold;
-}
-
-.redes-sociales a {
-  display: inline-block;
-  margin: 0 5px;
-  /* Espacio entre enlaces */
-  color: #020202;
-}
-
-.redes-sociales a:hover {
-  color: #ef3311;
-  /* Cambiar color al pasar el mouse */
-}
-/* Redefinir el tamaño de los iconos de redes sociales */
-.redes-sociales a img {
-  width: 30px; /* Ajusta el ancho de los iconos */
-  height: auto; /* Mantiene la proporción de aspecto */
-}
-
-/* Centrar los iconos de redes sociales */
-.redes-sociales {
-  justify-content: center; /* Centra horizontalmente */
-}
-
-/* Eliminar el espacio entre los iconos de redes sociales */
-.redes-sociales a {
-  margin: 0 10px; /* Reduce el espacio horizontal entre los iconos */
-}
-
-/* -------------- Sobre nosotros -------------- */
-.tarjetas-equipo {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 10px;
-}
-
-.tarjeta-equipo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  color: var(--heading1);
-  background-color: #222222;
-  border-radius: 15px;
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
-  padding: 15px;
-  gap: 5px;
-}
-
-.tarjeta-equipo img {
-  border-radius: 7px;
-}
-
-.tarjeta-equipo p {
-  color: var(--text1);
-}
-/* -------------------------------------------- */
-
-#contacto,
-#redes-sociales {
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  /* Bordes redondeados */
-  background-color: rgba(97, 95, 95, 0.5);
-  /* Fondo gris semi-transparente */
-  color: white;
-  /* Color del texto blanco */
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
-  /* Efecto de brillo */
-}
-
-#sobre-nosotros h2,
-#contacto h2,
-#redes-sociales h2 {
-  margin-top: 0;
-  /* Eliminar margen superior */
-}
-
-#sobre-nosotros {
-  font-size: 1.1em;
-  /* Ajusta el tamaño del texto según tus preferencias */
-  color: rgb(9, 9, 9);
-  /* Color del texto blanco */
-  font-weight: bold;
-}
-
-#redes-sociales a {
-  display: inline-block;
-  margin: 0 5px;
-  /* Espacio entre enlaces */
-  color: #020202;
-}
-
-#redes-sociales a:hover {
-  color: #ef3311;
-  /* Cambiar color al pasar el mouse */
-}
-
-#derechos {
-  font-size: 0.9em;
-  /* Ajusta el tamaño del texto según tus preferencias */
-  color: rgb(14, 13, 7);
-  /* Color del texto blanco */
-  font-weight: bold;
-  font-family: "Nunito", sans-serif;
-  /* Usando Nunito como la fuente principal */
-}
-
+/* ----------------------- Testimonios ----------------------- */
 /* Estilos CSS para la galería de testimonios */
 .testimonial {
   display: flex;
@@ -555,6 +362,34 @@ footer {
   /* Bordes redondeados */
 }
 
+/* -------------- Sobre nosotros -------------- */
+.tarjetas-equipo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.tarjeta-equipo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  color: var(--heading1);
+  background-color: #222222;
+  border-radius: 15px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  gap: 5px;
+}
+
+.tarjeta-equipo img {
+  border-radius: 7px;
+}
+
+.tarjeta-equipo p {
+  color: var(--text1);
+}
 
 /* ---------------- Formulario de contacto ---------------- */
 .form-name {
@@ -567,7 +402,8 @@ footer {
   /* Hacer que el label ocupe todo el ancho disponible */
   font-weight: bold;
   color: yellow;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
   margin-bottom: 5px;
   /* Espacio entre el label y el input */
 }
@@ -591,7 +427,8 @@ footer {
   /* Hacer que el label ocupe todo el ancho disponible */
   font-weight: bold;
   color: yellow;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
   margin-bottom: 5px;
   /* Espacio entre el label y el input */
 }
@@ -615,7 +452,8 @@ footer {
   /* Hacer que el label ocupe todo el ancho disponible */
   font-weight: bold;
   color: yellow;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
   margin-bottom: 5px;
   /* Espacio entre el label y el textarea */
 }
@@ -639,7 +477,8 @@ footer {
   /* Hacer que el label ocupe todo el ancho disponible */
   font-weight: bold;
   color: yellow;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
   margin-bottom: 5px;
   /* Espacio entre el label y el textarea */
 }
@@ -677,26 +516,22 @@ footer {
 }
 
 /* Estilo para las etiquetas cuando están seleccionadas */
-.form-calif input[type="radio"]:checked+label {
+.form-calif input[type="radio"]:checked + label {
   font-weight: bold;
   /* Texto en negrita cuando están seleccionadas */
   color: rgb(198, 237, 23);
   /* Cambia el color del texto cuando están seleccionadas */
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
 }
 
 .form-calif-preg {
   /* Estilos específicos para el encabezado h3 */
   font-weight: bold;
   color: rgb(226, 226, 4);
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
   margin-bottom: 5px;
-}
-
-/* Estilo para el contenedor de la sección */
-.form-motivo {
-  margin-bottom: 20px;
-  /* Espacio inferior para separar de otros elementos */
 }
 
 .form-button input[type="submit"],
@@ -728,29 +563,14 @@ footer {
   /* Cambia el fondo a un tono más claro */
 }
 
-#contactForm {}
+/* ------------------------------------------------------------- */
+/* ----------------------- MEDIA QUERIES ----------------------- */
+/* ------------------------------------------------------------- */
 
-.datos-form {}
-
-.mensaje-form {}
-
-.select-form {}
-
-.check-form {}
-
-.btn {}
-/* -------------------------------------------------------- */
-
-/* ---------------------------------- */
-/* Responsive tablet                  */
-/* ---------------------------------- */
+/* ***************** TABLETA ***************** */
 @media (max-width: 768px) {
   /* ---------- Header ---------- */
   header {
-    /* z-index: 999; */
-    /* background-color: var(--header-bg); */
-    /* color: var(--primary-color); */
-    /* background-color: orange; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -765,9 +585,6 @@ footer {
   /* icono hamburguesa */
   .menu-icon {
     display: block;
-    /* position: fixed; */
-    /* top: 20px;
-        right: 20px; */
     cursor: pointer;
   }
 
@@ -777,11 +594,9 @@ footer {
     z-index: 999;
     display: block;
     position: fixed;
-    /* top: -50%; */
     left: 100%;
     background: var(--header-bg);
     width: 100%;
-    /* height: 100vh; */
     right: 100px;
     margin-left: 0;
   }
@@ -822,20 +637,14 @@ footer {
   /* ---------- Footer ---------- */
 }
 
-/* ---------------------------------- */
-/* Responsive Celular                 */
-/* ---------------------------------- */
+/* ***************** Celular ***************** */
 @media (max-width: 480px) {
   /* ---------- Header ---------- */
   header {
-    /* z-index: 999; */
-    /* background-color: red; */
-    /* color: var(--primary-color); */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
-    /* font-size: 0.8rem; */
   }
 
   /* checkbox menu */
@@ -846,9 +655,6 @@ footer {
   /* icono hamburguesa */
   .menu-icon {
     display: block;
-    /* position: fixed; */
-    /* top: 20px;
-        right: 20px; */
     cursor: pointer;
   }
 
@@ -858,19 +664,12 @@ footer {
     z-index: 999;
     display: block;
     position: fixed;
-    /* top: -50%; */
     left: 100%;
     background: var(--header-bg);
     width: 100%;
-    /* height: 100vh; */
     right: 100px;
     margin-left: 0;
   }
-
-  /* elementos de menu */
-  /* nav li:hover {
-    background-color: var(--menu-bg2);
-  } */
 
   nav li:hover a {
     color: var(--primary-color);
@@ -901,8 +700,6 @@ footer {
   }
 
   .container {
-    /* background-color: rgba(220, 220, 220, 0.26); */
-    /* background-color: rgba(184, 47, 47, 0.6); */
     background-color: transparent;
     margin: 0px auto 15px;
     padding: 10px 10px;
@@ -913,11 +710,6 @@ footer {
   .tarjeta-cat {
     width: 100px;
     height: 65px;
-    /* border-radius: 2px; */
-    /* border-radius: var(--tarjeta-radius);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3); */
   }
   .overlay-cat h3 {
     font-size: 0.85rem;
@@ -925,26 +717,88 @@ footer {
 
   /* ---------- Footer ---------- */
 }
-/* ---------------------------------------- */
+/* ------------------------------------------------------------- */
 
-.texto-tarjeta {
-  color: #fff !important;
+/* --------------------------- */
+/* FOOTER CON GRID E ICONOS SN */
+footer {
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  /* Fuente Roboto */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* 12 columnas de tamaño igual */
+  gap: 20px;
+  /* Espacio entre las secciones */
 }
 
-.estilo-body-recetas {
-  font-family: Arial, sans-serif;
-  background-image: url("../img/fondo1.jpg");
-  /* Ruta a tu imagen de fondo */
-  background-position: center;
-  /* Centra la imagen */
-  background-repeat: no-repeat;
-  /* Evita que la imagen se repita */
-  background-size: cover;
-  /* Ajusta la imagen al tamaño de la ventana del navegador */
+/* Estilos para las secciones del footer */
+.section-footer {
+  display: grid;
+  /* Ocupa todas las columnas disponibles */
+  grid-column: 1 / -1;
+  grid-template-columns: 1fr;
+  /* Espacio entre las secciones */
+  gap: 20px;
 }
 
-#mas-informacion {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!! ORDENAR ESTO !!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.contacto,
+.redes-sociales,
+.derechos {
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  /* Fondo gris semi-transparente */
+  background-color: rgba(97, 95, 95, 0.5);
+  /* Color del texto blanco */
+  color: white;
+  /* Efecto de brillo */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.redes-sociales a {
+  display: inline-block;
+  margin: 0 10px;
+  /* Espacio entre enlaces */
+  color: #020202;
+}
+
+.redes-sociales a:hover {
+  color: #ef3311;
+  /* Cambiar color al pasar el mouse */
+}
+
+/* Redefinir el tamaño de los iconos de redes sociales */
+.redes-sociales a img {
+  width: 30px; /* Ajusta el ancho de los iconos */
+  height: auto; /* Mantiene la proporción de aspecto */
+}
+
+/* Centrar los iconos de redes sociales */
+.redes-sociales {
+  justify-content: center; /* Centra horizontalmente */
+}
+
+#contacto h2,
+#redes-sociales h2 {
+  margin-top: 0;
+  /* Eliminar margen superior */
+}
+
+#derechos {
+  font-size: 0.9em;
+  /* Ajusta el tamaño del texto según tus preferencias */
+  color: rgb(14, 13, 7);
+  /* Color del texto blanco */
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  /* Usando Nunito como la fuente principal */
 }
