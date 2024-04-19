@@ -24,8 +24,8 @@
     />
   </head>
   <body class="estilo-body">
+    <div id="subir"></div>
     <header>
-      <div id="subir"></div>
       <div class="logo-header">
         <a href="index.html"><img src="static/img/logo00.svg" alt="logo" /></a>
         <h1>Cocinando en Equipo</h1>
@@ -33,10 +33,7 @@
 
       <div id="logo-subir">
         <a href="#subir"
-          ><i
-            class="fa-solid fa-circle-arrow-up fa-beat fa-2xl"
-            style="color: #218b04"
-          ></i
+          ><i class="fa-solid fa-circle-arrow-up fa-beat fa-2xl"></i
         ></a>
       </div>
 
@@ -46,201 +43,170 @@
           <i class="menu-icon"> <img src="static/img/menu.svg" alt="" /></i>
         </label>
         <ul id="menu-principal">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="index.html#recetas">Recetas</a></li>
-          <li><a href="index.html#categorias">Categorías</a></li>
-          <li><a href="testimonios.html">Testimonios</a></li>
-          <li><a href="quienesomos.html">Sobre Nosotros</a></li>
-          <li id="borde-lista-derecha"><a href="contacto.html">Contacto</a></li>
+          <a href="index.html"><li>Inicio</li></a>
+          <a href="index.html#recetas"><li>Recetas</li></a>
+          <a href="index.html#categorias"><li>Categorías</li></a>
+          <a href="testimonios.html"><li>Testimonios</li></a>
+          <a href="quienesomos.html"><li>Sobre Nosotros</li></a>
+          <a href="contacto.html"><li id="borde-lista-derecha">Contacto</li></a>
         </ul>
       </nav>
     </header>
 
-    <main style="line-height: 1.5">
-      <section id="sobre-nosotros" class="container">
+    <main>
+      <section id="form-contacto" class="container">
         <h2>Formulario de Contacto</h2>
-        <h3
-          style="
-            color: yellow;
-            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-              1px 1px 0 black;
-            font-weight: bold;
-          "
-        >
-          Complete sus datos y le responderemos a la brevedad
-        </h3>
+        <h3>Complete sus datos y le responderemos a la brevedad</h3>
+        <br />
 
         <form id="contactForm" onsubmit="return validateForm()">
           <div class="form-group">
             <section class="form-name">
-              <label
-                for="name"
-                style="
-                  font-weight: bold;
-                  color: yellow;
-                  text-shadow: -1px -1px 0 black, 1px -1px 0 black,
-                    -1px 1px 0 black, 1px 1px 0 black;
-                "
-                >Nombre:</label
-              >
+              <label for="name">Nombre:</label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 placeholder="Nombre y Apellido"
-                required
+                required=""
               />
             </section>
           </div>
 
           <div class="form-group">
             <section class="form-email">
-              <label
-                for="email"
-                style="
-                  font-weight: bold;
-                  color: yellow;
-                  text-shadow: -1px -1px 0 black, 1px -1px 0 black,
-                    -1px 1px 0 black, 1px 1px 0 black;
-                "
-                >Correo electrónico:</label
-              >
+              <label for="email">Correo electrónico:</label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 placeholder="Direccion de correo"
-                required
+                required=""
               />
             </section>
-          </div>
 
-          <div class="form-group">
-            <section class="form-message">
-              <label
-                for="message"
-                style="
-                  font-weight: bold;
-                  color: yellow;
-                  text-shadow: -1px -1px 0 black, 1px -1px 0 black,
-                    -1px 1px 0 black, 1px 1px 0 black;
-                "
-                >Mensaje:</label
-              >
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                cols="50"
-                placeholder="Escriba su mensaje aquí"
-                required
-              ></textarea>
-            </section>
-          </div>
+            <div class="form-group">
+              <section class="form-message">
+                <label for="message">Mensaje:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  cols="50"
+                  placeholder="Escriba su mensaje aquí"
+                  required=""
+                ></textarea>
+              </section>
 
-          <div class="form-group">
-            <section class="form-motivo">
-              <label
-                for="motivo"
-                style="
-                  font-weight: bold;
-                  color: yellow;
-                  text-shadow: -1px -1px 0 black, 1px -1px 0 black,
-                    -1px 1px 0 black, 1px 1px 0 black;
-                "
-                >Motivo:</label
-              >
-              <select id="motivo" name="motivo" required>
-                <option value="">Seleccione el motivo</option>
-                <option value="recetas">Consultas sobre recetas</option>
-                <option value="ingredientes">
-                  Consultas sobre Ingredientes
-                </option>
-                <option value="nueva">Sugerir una receta</option>
-                <option value="sugerencias">Comentarios y sugerencias</option>
-                <option value="otros">Otros Motivos</option>
-              </select>
-            </section>
-          </div>
+              <div class="form-group">
+                <section class="form-motivo">
+                  <label for="motivo">Motivo:</label>
+                  <select id="motivo" name="motivo" required="">
+                    <option value="" selected="selected">
+                      Seleccione el motivo
+                    </option>
+                    <option value="recetas">Consultas sobre recetas</option>
+                    <option value="ingredientes">
+                      Consultas sobre Ingredientes
+                    </option>
+                    <option value="nueva">Sugerir una receta</option>
+                    <option value="sugerencias">
+                      Comentarios y sugerencias
+                    </option>
+                    <option value="otros">Otros Motivos</option>
+                  </select>
+                </section>
+              </div>
 
-          <div class="form-group">
-            <label
-              >¿Cómo calificarías tu experiencia en nuestro sitio web?</label
-            >
-            <input
-              type="radio"
-              id="muy_satisfecho"
-              name="experiencia"
-              value="muy_satisfecho"
-            />
-            <label for="muy_satisfecho">Muy satisfecho</label>
+              <h4 class="form-calif-preg">
+                ¿Cómo calificarías tu experiencia en nuestro sitio web?
+              </h4>
 
-            <input
-              type="radio"
-              id="satisfecho"
-              name="experiencia"
-              value="satisfecho"
-            />
-            <label for="satisfecho">Satisfecho</label>
+              <section class="form-calif">
+                <input
+                  type="radio"
+                  id="muy_satisfecho"
+                  name="experiencia"
+                  value="muy_satisfecho"
+                />
+                <label for="muy_satisfecho">Muy satisfecho</label>
 
-            <input
-              type="radio"
-              id="neutral"
-              name="experiencia"
-              value="neutral"
-            />
-            <label for="neutral">Neutral</label>
+                <input
+                  type="radio"
+                  id="satisfecho"
+                  name="experiencia"
+                  value="satisfecho"
+                />
+                <label for="satisfecho">Satisfecho</label>
 
-            <input
-              type="radio"
-              id="insatisfecho"
-              name="experiencia"
-              value="insatisfecho"
-            />
-            <label for="insatisfecho">Insatisfecho</label>
+                <input
+                  type="radio"
+                  id="neutral"
+                  name="experiencia"
+                  value="neutral"
+                />
+                <label for="neutral">Neutral</label>
 
-            <input
-              type="radio"
-              id="muy_insatisfecho"
-              name="experiencia"
-              value="muy_insatisfecho"
-            />
-            <label for="muy_insatisfecho">Muy insatisfecho</label>
-          </div>
+                <input
+                  type="radio"
+                  id="insatisfecho"
+                  name="experiencia"
+                  value="insatisfecho"
+                  checked="checked"
+                />
+                <label for="insatisfecho">Insatisfecho</label>
 
-          <div class="form-group">
-            <label for="suscripcion">Suscribirse:</label>
-            <input
-              type="checkbox"
-              id="suscripcion"
-              name="suscripcion"
-              value="si"
-            />
-            <label for="suscripcion">Deseo recibir correos electrónicos</label>
-          </div>
+                <input
+                  type="radio"
+                  id="muy_insatisfecho"
+                  name="experiencia"
+                  value="muy_insatisfecho"
+                />
+                <label for="muy_insatisfecho">Muy insatisfecho</label>
+              </section>
 
-          <div class="form-group">
-            <section class="form-button">
-              <input type="submit" value="Enviar" />
-              <button type="button" onclick="clearForm()">Borrar</button>
-            </section>
+              <div class="form-group">
+                <label for="suscripcion">Suscribirse:</label>
+                <input
+                  type="checkbox"
+                  id="suscripcion"
+                  name="suscripcion"
+                  value="si"
+                />
+                <label for="suscripcion"
+                  >Deseo recibir correos electrónicos</label
+                >
+              </div>
+
+              <div class="form-group">
+                <section class="form-button">
+                  <input type="submit" value="Enviar" />
+                  <button type="button" onclick="clearForm()">Borrar</button>
+                </section>
+              </div>
+
+              <script>
+                function validateForm() {
+                  var name = document.getElementById("name").value;
+                  var email = document.getElementById("email").value;
+                  var message = document.getElementById("message").value;
+                  var motivo = document.getElementById("motivo").value;
+
+                  if (
+                    name == "" ||
+                    email == "" ||
+                    message == "" ||
+                    motivo == ""
+                  ) {
+                    alert("Todos los campos son obligatorios.");
+                    return false;
+                  }
+                  return true;
+                }
+              </script>
+            </div>
           </div>
         </form>
-
-        <script>
-          function validateForm() {
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var message = document.getElementById("message").value;
-            var motivo = document.getElementById("motivo").value;
-
-            if (name == "" || email == "" || message == "" || motivo == "") {
-              alert("Todos los campos son obligatorios.");
-              return false;
-            }
-            return true;
-          }
-        </script>
       </section>
     </main>
 

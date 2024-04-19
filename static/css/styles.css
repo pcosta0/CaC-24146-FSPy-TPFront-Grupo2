@@ -555,34 +555,148 @@ footer {
   /* Bordes redondeados */
 }
 
-/* Estilos para el formulario de contacto con clases */
+
+/* ---------------- Formulario de contacto ---------------- */
+.form-name {
+  margin-bottom: 10px;
+  /* Espacio entre el formulario y el siguiente elemento */
+}
+
+.form-name label {
+  display: block;
+  /* Hacer que el label ocupe todo el ancho disponible */
+  font-weight: bold;
+  color: yellow;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  margin-bottom: 5px;
+  /* Espacio entre el label y el input */
+}
+
 .form-name input[type="text"] {
-  position: absolute;
-  top: 225px;
-  right: 709px;
-  width: 350px;
+  width: 50%;
+  /* El input ocupará todo el ancho disponible */
+  padding: 8px;
+  /* Espaciado interior para el input */
+  border: 1px solid #ccc;
+  /* Borde para el input */
+}
+
+.form-email {
+  margin-bottom: 10px;
+  /* Espacio entre el formulario y el siguiente elemento */
+}
+
+.form-email label {
+  display: block;
+  /* Hacer que el label ocupe todo el ancho disponible */
+  font-weight: bold;
+  color: yellow;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  margin-bottom: 5px;
+  /* Espacio entre el label y el input */
 }
 
 .form-email input[type="email"] {
-  position: absolute;
-  top: 250px;
-  right: 709px;
-  width: 350px;
+  width: 50%;
+  /* El input ocupará todo el ancho disponible */
+  padding: 8px;
+  /* Espaciado interior para el input */
+  border: 1px solid #ccc;
+  /* Borde para el input */
+}
+
+.form-message {
+  margin-bottom: 10px;
+  /* Espacio entre el formulario y el siguiente elemento */
+}
+
+.form-message label {
+  display: block;
+  /* Hacer que el label ocupe todo el ancho disponible */
+  font-weight: bold;
+  color: yellow;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  margin-bottom: 5px;
+  /* Espacio entre el label y el textarea */
 }
 
 .form-message textarea {
-  /* Corregido a .form-message textarea */
-  position: absolute;
-  top: 275px;
-  right: 709px;
-  width: 350px;
+  width: 50%;
+  /* El textarea ocupará todo el ancho disponible */
+  padding: 8px;
+  /* Espaciado interior para el textarea */
+  border: 1px solid #ccc;
+  /* Borde para el textarea */
 }
 
-.form-motivo select {
-  position: absolute;
-  top: 348px;
-  right: 709px;
-  width: 350px;
+.form-motivo {
+  margin-bottom: 10px;
+  /* Espacio entre el formulario y el siguiente elemento */
+}
+
+.form-motivo label {
+  display: block;
+  /* Hacer que el label ocupe todo el ancho disponible */
+  font-weight: bold;
+  color: yellow;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  margin-bottom: 5px;
+  /* Espacio entre el label y el textarea */
+}
+
+.form-motivo textarea {
+  width: 50%;
+  /* El textarea ocupará todo el ancho disponible */
+  padding: 8px;
+  /* Espaciado interior para el textarea */
+  border: 1px solid #ccc;
+  /* Borde para el textarea */
+}
+
+/* Estilo para el contenedor de la sección */
+.form-calif {
+  margin-bottom: 20px;
+  /* Espacio inferior para separar de otros elementos */
+}
+
+/* Estilo para los radio buttons */
+.form-calif input[type="radio"] {
+  display: none;
+  /* Oculta los radio buttons por defecto */
+}
+
+/* Estilo para las etiquetas de los radio buttons */
+.form-calif label {
+  display: block;
+  /* Cambia las etiquetas a bloques para colocarlas una debajo de la otra */
+  margin-bottom: 10px;
+  /* Espacio inferior entre las etiquetas para separarlas */
+  cursor: pointer;
+  /* Cambia el cursor al pasar sobre las etiquetas */
+  font-weight: bold;
+}
+
+/* Estilo para las etiquetas cuando están seleccionadas */
+.form-calif input[type="radio"]:checked+label {
+  font-weight: bold;
+  /* Texto en negrita cuando están seleccionadas */
+  color: rgb(198, 237, 23);
+  /* Cambia el color del texto cuando están seleccionadas */
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.form-calif-preg {
+  /* Estilos específicos para el encabezado h3 */
+  font-weight: bold;
+  color: rgb(226, 226, 4);
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  margin-bottom: 5px;
+}
+
+/* Estilo para el contenedor de la sección */
+.form-motivo {
+  margin-bottom: 20px;
+  /* Espacio inferior para separar de otros elementos */
 }
 
 .form-button input[type="submit"],
@@ -614,23 +728,18 @@ footer {
   /* Cambia el fondo a un tono más claro */
 }
 
-#contactForm {
-}
+#contactForm {}
 
-.datos-form {
-}
+.datos-form {}
 
-.mensaje-form {
-}
+.mensaje-form {}
 
-.select-form {
-}
+.select-form {}
 
-.check-form {
-}
+.check-form {}
 
-.btn {
-}
+.btn {}
+/* -------------------------------------------------------- */
 
 /* ---------------------------------- */
 /* Responsive tablet                  */
