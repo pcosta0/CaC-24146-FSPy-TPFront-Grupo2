@@ -317,15 +317,57 @@ nav a {
 }
 
 /* ---------- Receta estrella ----------- */
-.tarjeta-est img {
+.receta-estrella {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  gap: 10px;
+}
+
+.receta-estrella .checked {
+  color: orange;
+}
+
+.receta-estrella-col h3 {
+  font-weight: 700;
+}
+
+.receta-estrella-col {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.receta-estrella-col1 {
+  align-items: end;
+}
+
+.receta-estrella-col2 {
+  align-items: start;
+}
+
+.tarjeta-est {
+  border: 1px solid #666;
+  padding: 10px;
+  margin-bottom: 15px;
   width: 50%;
+  border-radius: 2px;
+  transform: rotate(3deg);
+  background-color: #fcfcfc;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-est img {
   height: auto;
   /* Evita que la imagen se extienda más allá de su tamaño original */
   max-width: 100%;
   /* Evita que la imagen se extienda más allá de su tamaño original */
   max-height: 100%;
   scale: 1;
-  border-radius: var(--tarjeta-radius);
+  vertical-align: middle;
   object-fit: cover;
   transition: all 0.3s;
 }
@@ -633,6 +675,21 @@ nav a {
     left: 0;
     transition: all 0.25s;
   }
+
+  /* Receta estrella  */
+  .receta-estrella-col {
+    padding: 0px;
+  }
+  
+  .receta-estrella-col1 {
+    order: 1;
+    align-items: center;
+  }
+  
+  .receta-estrella-col2 {
+    align-items: center;
+  }
+  
 
   /* ---------- Footer ---------- */
 }
