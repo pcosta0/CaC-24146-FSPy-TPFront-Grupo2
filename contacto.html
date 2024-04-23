@@ -22,6 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <script src="static/js/validacion.js"></script>
   </head>
   <body class="estilo-body">
     <div id="subir"></div>
@@ -185,25 +186,7 @@
                 </section>
               </div>
 
-              <script>
-                function validateForm() {
-                  var name = document.getElementById("name").value;
-                  var email = document.getElementById("email").value;
-                  var message = document.getElementById("message").value;
-                  var motivo = document.getElementById("motivo").value;
-
-                  if (
-                    name == "" ||
-                    email == "" ||
-                    message == "" ||
-                    motivo == ""
-                  ) {
-                    alert("Todos los campos son obligatorios.");
-                    return false;
-                  }
-                  return true;
-                }
-              </script>
+              
             </div>
           </div>
         </form>
