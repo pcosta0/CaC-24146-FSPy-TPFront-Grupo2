@@ -372,6 +372,33 @@ nav a {
   transition: all 0.3s;
 }
 
+#grid-estrella {
+  display: grid; 
+  grid-template-columns: 50% 50%; 
+  gap: 10px;
+  text-align: center;
+  /* grid-row: auto; */
+}
+
+#tabla-info-estrella {
+  width: 60%;
+  border-color: #ef3311;
+  border: 5px;
+  margin-left: 21%;
+  }
+
+#tabla-info-estrella, th, td {
+  border: 1px solid #ef3311;
+  text-align: center;
+}
+
+#tabla-info-estrella th {
+  background-color: coral;
+}
+
+#tabla-info-estrella tr:hover{
+  background-color: rgb(251, 251, 252);
+}
 /* ----------------------- Testimonios ----------------------- */
 /* Estilos CSS para la galería de testimonios */
 .testimonial {

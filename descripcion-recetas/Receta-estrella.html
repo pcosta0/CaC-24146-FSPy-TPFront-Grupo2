@@ -8,14 +8,15 @@
   <link rel="stylesheet" href="../static/css/styles.css" />
   <link rel="shortcut icon" href="../static/img/Logo.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- Enlaces a hojas de estilo CSS -->
+  <!-- Enlaces a hojas de estilo CSS -->  
 </head>
 
-<body class="estilo-body-recetas">    
+<body class="estilo-body">
+  <div id="subir"></div>    
   <header>
 
     <!-- modificacion -->
-    <div id="subir"   class="logo-header">
+    <div class="logo-header">
       <a href=""><img src="../static/img/logo00.svg" alt="logo" /></a>
       <h1>Cocinando en Equipo</h1>
     </div>
@@ -35,67 +36,74 @@
   </header>
 
   <main>
-    <section>
-        <h2 style="text-align: center; margin-top: 15px;">RECETA ESTRELLA</h2>      
-    </section>
+   
+    <div id="grid-estrella">
+    <div style="grid-column: 1/span 2; background-color: rgba(255, 255, 255, 0.425); border-radius: 10px; backdrop-filter: blur(5px);">
+        <h2 style= "color: var(--heading1);
+        padding-top: 20px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.1rem;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8), 0 1px 5px rgba(0, 0, 0, 0.5);
+        padding-bottom: 10px;">RECETA ESTRELLA</h2>      
+    </div>
+    <div style="grid-column: 1/ span 2; background-color: rgba(255, 255, 255, 0.425); border-radius: 10px; backdrop-filter: blur(5px);">
+      <h3 style="display: block;
+      font-size: 1.17em;
+      font-weight: bold;
+      unicode-bidi: isolate;
+      text-align: center; font-size: 30px !important; margin:15px 0; border: 1px solid #000;">Panqueques o Crepés</h3>
+      <p style="text-align: center;">¿Por qué es nuestra receta estrella?</p>            
+      <p style="text-align: center;">Porque necesitas mínimos ingredientes, en poco tiempo, y es muy fácil de hacer</p>              
+  </div>
 
-    <section>
-        <div>
-            <h3 style="text-align: center; font-size: 30px !important; margin:15px 0; border: 1px solid #000;">Panqueques o Crepés</h3>
-            <p style="text-align: center;">¿Por qué es nuestra receta estrella?</p>            
-            <p style="text-align: center;">Porque necesitas mínimos ingredientes, en poco tiempo, y es muy fácil de hacer</p>              
-        </div>
+  <div style="grid-row: 3/span 2; background-color: rgba(255, 255, 255, 0.425); border-radius: 10px; backdrop-filter: blur(5px); align-content: center;">
+    
+      <iframe width=90% height="80%" src="https://www.youtube.com/embed/UkzSgQEt2Lk?si=1kHkwCkJPJSvP1sj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+  
+  </div>
+  
 
-        <div id="mas-informacion">
-            
-                <img src="../static/img/estrella/panqueques.jpg" alt="panqueques servidos" style="width: 30%;">
-            
-            
-                <table border="3">
-                    <thead>
-                        <tr>
-                            <th colspan="2">Información</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Nivel de dificultad</strong></td>
-                            <td>Fácil</td>
-                        </tr>
+  <div style="background-color: rgba(255, 255, 255, 0.425); border-radius: 10px; backdrop-filter: blur(5px);">
+    <img src="../static/img/estrella/panqueques.jpg" alt="panqueques servidos" style="width: 70%; border-radius: 10px; box-shadow: 5px 5px 15px -5px rgba(0,0,0,0);">
+  </div>
 
-                        <tr>
-                            <td><strong>Ingrediente principal</strong></td>
-                            <td>Harina y leche</td>
-                        </tr>
+  <div style="background-color: rgba(255, 255, 255, 0.425); border-radius: 10px; backdrop-filter: blur(5px);">
+    <table id="tabla-info-estrella">
+      <thead>
+          <tr>
+              <th colspan="2" style="color: #fff; font-weight: 500;">INFORMACIÓN</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><strong>Nivel de dificultad</strong></td>
+              <td>Fácil</td>
+          </tr>
 
-                        <tr>
-                            <td><strong>Cantidad de ingredientes</strong></td>
-                            <td>4</td>
-                        </tr>
+          <tr>
+              <td><strong>Ingrediente principal</strong></td>
+              <td>Harina y leche</td>
+          </tr>
 
-                        <tr>
-                            <td><strong>Tiempo de cocción</strong></td>
-                            <td>30 minutos</td>
-                        </tr>
-                    </tbody>
-                </table>
-            
-        </div>
-        <!-- División contenedora -->
-        <div>
-            <!-- División para más información de las recetas -->
-            <div>
-                <!-- Descripción -->
-                <div style="display: flex; justify-content: center;">                    
-                    <!-- Descripción de receta -->
-                    <div>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/UkzSgQEt2Lk?si=1kHkwCkJPJSvP1sj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
-                    </div>
-                </div>
-                <div></div>
-            </div>
-        </div>
-    </section>
+          <tr>
+              <td><strong>Cantidad de ingredientes</strong></td>
+              <td>4</td>
+          </tr>
+
+          <tr>
+              <td><strong>Tiempo de cocción</strong></td>
+              <td>30 minutos</td>
+          </tr>
+      </tbody>
+  </table>
+
+  </div>
+
+  
+
+    
+  </div>
 
 
 
@@ -120,10 +128,18 @@
     <div class="grid-item redes-sociales">
       <h2>Síguenos en Redes Sociales</h2>
       <!-- Enlaces a redes sociales -->
-      <a href="#"><img src="static/img/iconSN/twitter.png" alt="Twitter"></a>
-      <a href="#"><img src="static/img/iconSN/instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="static/img/iconSN/facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="static/img/iconSN/tik-tok.png" alt="TikTok"></a>
+      <a href="#"
+        ><img src="../static/img/iconSN/twitter.png" alt="Twitter"
+      /></a>
+      <a href="#"
+        ><img src="../static/img/iconSN/instagram.png" alt="Instagram"
+      /></a>
+      <a href="#"
+        ><img src="../static/img/iconSN/facebook.png" alt="Facebook"
+      /></a>
+      <a href="#"
+        ><img src="../static/img/iconSN/tik-tok.png" alt="TikTok"
+      /></a>
     </div>
     <div class="grid-item derechos">
       <p>&copy; 2024 Cocinando en Equipo. Todos los derechos reservados.</p>
