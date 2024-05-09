@@ -540,10 +540,19 @@ form .boton-calificar button:hover{
 /* ----------------------- Testimonios ----------------------- */
 /* ----------------------------------------------------------- */
 /* Estilos CSS para la galería de testimonios */
+.testimonios-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  color: #ffffff;
+  gap: 10px;
+}
+
 .testimonial {
   display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  align-items: start;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #e6e6e699;
 }
 
 .testimonial img {
