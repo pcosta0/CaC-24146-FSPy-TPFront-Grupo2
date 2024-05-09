@@ -111,6 +111,77 @@
     
   </div>
 
+  <!-- Lineas para calificar con estrellas -->
+  <div class="container-estrella" style="background-color: rgba(255, 255, 255, 0.425); border-radius: 10px; backdrop-filter: blur(5px); margin-top: 50px; padding-left: 15px; ">
+    
+    <div class="comentar">
+      <div class="agradecimiento">GRACIAS POR CALIFICAR</div>
+      <!-- <div class="editar">Editar</div>         -->
+    </div>
+
+  <div class="estrella-widget"> 
+    <input type="radio" name="calificar" id="calificar-5">
+    <label for="calificar-5" class="fas fa-star"></label>
+    <input type="radio" name="calificar" id="calificar-4">
+    <label for="calificar-4" class="fas fa-star"></label>
+    <input type="radio" name="calificar" id="calificar-3">
+    <label for="calificar-3" class="fas fa-star"></label>
+    <input type="radio" name="calificar" id="calificar-2">
+    <label for="calificar-2" class="fas fa-star"></label>
+    <input type="radio" name="calificar" id="calificar-1">
+    <label for="calificar-1" class="fas fa-star"></label>
+    <form action="javascript:void(0)" onSubmit="return validarformulario()">        
+      <div class="area-comentario">
+        <textarea id="textarea-comentario-id" cols="30" placeholder="Contanos qué te pareció la receta"></textarea>
+      </div>
+      <div class="boton-calificar">
+        <button type="submit">Calificar</button>
+      </div>
+    </form>
+</div>
+</div>
+
+
+<script>
+  const Bcalificar = document.querySelector ("button");
+  const comentar = document.querySelector (".comentar");
+  const widget = document.querySelector (".estrella-widget");    
+  function ocultarmostrarelementos(){
+    widget.style.display = "none";
+     comentar.style.display = "block";
+    //  Beditar.style.display = "block";
+    //  document.querySelector (".editar").style.display="block";
+     document.querySelector (".agradecimiento").style.display="block";
+  }
+  function validarformulario(){
+    if (document.getElementById ("textarea-comentario-id").value == ""){
+      alert ("Ingrese el comentario"); 
+      
+      return false;  
+    }
+    else {
+      ocultarmostrarelementos();
+      return true;
+    }       
+  }
+  
+  // const Beditar = document.querySelector (".editar");
+  //  Bcalificar.onclick = ()=>{
+  //   debugger;       
+  //    widget.style.display = "none";
+  //    comentar.style.display = "block";
+  //    Beditar.style.display = "block";
+  //    document.querySelector (".editar").style.display="block";
+  //  }         
+    //  Beditar.onclick = ()=>{
+    //    widget.style.display = "block";
+    //    comentar.style.display = "none";
+    //  }
+           
+    
+  </script>
+</div>
+
 
 
      
