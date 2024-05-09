@@ -37,6 +37,10 @@ a {
   color: var(--text2);
 }
 
+.invisible {
+  display: none;
+}
+
 /* Estilos generales */
 .estilo-body {
   background-image: url("../img/fondo1.jpg");
@@ -53,7 +57,9 @@ a {
   z-index: -999;
 }
 
+/* ---------------------------- */
 /* ---------- Header ---------- */
+/* ---------------------------- */
 header {
   z-index: 999;
   position: sticky;
@@ -101,7 +107,9 @@ header h1 {
   right: 40px;
 }
 
+/* -------------------------- */
 /* ---------- Menu ---------- */
+/* -------------------------- */
 /* lista de menu */
 nav ul {
   display: flex;
@@ -142,7 +150,9 @@ nav a {
   display: none;
 }
 
-/* --------------- Container --------------- */
+/* -------------------------- */
+/* ------- Container -------- */
+/* -------------------------- */
 .container {
   background-color: rgba(255, 255, 255, 0.425);
   margin: 9px 9px 0px;
@@ -163,7 +173,9 @@ nav a {
   padding-bottom: 20px;
 }
 
-/* --------------- Categorias --------------- */
+/* -------------------------- */
+/* ------- Categorias ------- */
+/* -------------------------- */
 .tarjetas-cat {
   display: flex;
   flex-wrap: wrap;
@@ -224,7 +236,9 @@ nav a {
   text-shadow: 0 0 10px #000, 0 0 15px #000, 0 0 25px #000;
 }
 
+/* ---------------------------------------------- */
 /* -------- Tarjetas de Recetas Populares-------- */
+/* ---------------------------------------------- */
 .tarjetas-pop {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -316,7 +330,9 @@ nav a {
   text-shadow: 0 0 10px #000, 0 0 15px #000, /* 0 0 20px #000, */ 0 0 25px #000;
 }
 
+/* -------------------------------------- */
 /* ---------- Receta estrella ----------- */
+/* -------------------------------------- */
 .receta-estrella {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
@@ -373,11 +389,10 @@ nav a {
 }
 
 #grid-estrella {
-  display: grid; 
-  grid-template-columns: 50% 50%; 
+  display: grid;
+  grid-template-columns: 50% 50%;
   gap: 10px;
   text-align: center;
-  /* grid-row: auto; */
 }
 
 #tabla-info-estrella {
@@ -385,9 +400,11 @@ nav a {
   border-color: #ef3311;
   border: 5px;
   margin-left: 21%;
-  }
+}
 
-#tabla-info-estrella, th, td {
+#tabla-info-estrella,
+th,
+td {
   border: 1px solid #ef3311;
   text-align: center;
 }
@@ -396,10 +413,13 @@ nav a {
   background-color: coral;
 }
 
-#tabla-info-estrella tr:hover{
+#tabla-info-estrella tr:hover {
   background-color: rgb(251, 251, 252);
 }
+
+/* ----------------------------------------------------------- */
 /* ----------------------- Testimonios ----------------------- */
+/* ----------------------------------------------------------- */
 /* Estilos CSS para la galería de testimonios */
 .testimonial {
   display: flex;
@@ -412,26 +432,28 @@ nav a {
   height: 130px;
   border-radius: 50%;
   margin-right: 20px;
-  border: 2px solid black;
   /* Añade un borde negro fino */
+  border: 2px solid black;
 }
 
 .testimonial p {
   font-size: 16px;
   line-height: 1.5;
-  max-width: 400px;
   /* Ancho máximo del párrafo */
-  margin: 0;
+  max-width: 400px;
   /* Eliminar los márgenes predeterminados */
-  padding: 10px;
+  margin: 0;
   /* Agregar espacio interno */
-  background-color: #f9f9f9;
+  padding: 10px;
   /* Color de fondo para resaltar */
-  border-radius: 10px;
+  background-color: #f9f9f9;
   /* Bordes redondeados */
+  border-radius: 10px;
 }
 
+/* -------------------------------------------- */
 /* -------------- Sobre nosotros -------------- */
+/* -------------------------------------------- */
 .tarjetas-equipo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -460,136 +482,138 @@ nav a {
   color: var(--text1);
 }
 
+/* -------------------------------------------------------- */
 /* ---------------- Formulario de contacto ---------------- */
+/* -------------------------------------------------------- */
 .form-name {
-  margin-bottom: 10px;
   /* Espacio entre el formulario y el siguiente elemento */
+  margin-bottom: 10px;
 }
 
 .form-name label {
-  display: block;
   /* Hacer que el label ocupe todo el ancho disponible */
+  display: block;
   font-weight: bold;
   color: yellow;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;
-  margin-bottom: 5px;
   /* Espacio entre el label y el input */
+  margin-bottom: 5px;
 }
 
 .form-name input[type="text"] {
-  width: 50%;
   /* El input ocupará todo el ancho disponible */
-  padding: 8px;
+  width: 50%;
   /* Espaciado interior para el input */
-  border: 1px solid #ccc;
+  padding: 8px;
   /* Borde para el input */
+  border: 1px solid #ccc;
 }
 
 .form-email {
-  margin-bottom: 10px;
   /* Espacio entre el formulario y el siguiente elemento */
+  margin-bottom: 10px;
 }
 
 .form-email label {
-  display: block;
   /* Hacer que el label ocupe todo el ancho disponible */
+  display: block;
   font-weight: bold;
   color: yellow;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;
-  margin-bottom: 5px;
   /* Espacio entre el label y el input */
+  margin-bottom: 5px;
 }
 
 .form-email input[type="email"] {
-  width: 50%;
   /* El input ocupará todo el ancho disponible */
-  padding: 8px;
+  width: 50%;
   /* Espaciado interior para el input */
-  border: 1px solid #ccc;
+  padding: 8px;
   /* Borde para el input */
+  border: 1px solid #ccc;
 }
 
 .form-message {
-  margin-bottom: 10px;
   /* Espacio entre el formulario y el siguiente elemento */
+  margin-bottom: 10px;
 }
 
 .form-message label {
-  display: block;
   /* Hacer que el label ocupe todo el ancho disponible */
+  display: block;
   font-weight: bold;
   color: yellow;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;
-  margin-bottom: 5px;
   /* Espacio entre el label y el textarea */
+  margin-bottom: 5px;
 }
 
 .form-message textarea {
-  width: 50%;
   /* El textarea ocupará todo el ancho disponible */
-  padding: 8px;
+  width: 50%;
   /* Espaciado interior para el textarea */
-  border: 1px solid #ccc;
+  padding: 8px;
   /* Borde para el textarea */
+  border: 1px solid #ccc;
 }
 
 .form-motivo {
-  margin-bottom: 10px;
   /* Espacio entre el formulario y el siguiente elemento */
+  margin-bottom: 10px;
 }
 
 .form-motivo label {
-  display: block;
   /* Hacer que el label ocupe todo el ancho disponible */
+  display: block;
   font-weight: bold;
   color: yellow;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;
-  margin-bottom: 5px;
   /* Espacio entre el label y el textarea */
+  margin-bottom: 5px;
 }
 
 .form-motivo textarea {
-  width: 50%;
   /* El textarea ocupará todo el ancho disponible */
-  padding: 8px;
+  width: 50%;
   /* Espaciado interior para el textarea */
-  border: 1px solid #ccc;
+  padding: 8px;
   /* Borde para el textarea */
+  border: 1px solid #ccc;
 }
 
 /* Estilo para el contenedor de la sección */
 .form-calif {
-  margin-bottom: 20px;
   /* Espacio inferior para separar de otros elementos */
+  margin-bottom: 20px;
 }
 
 /* Estilo para los radio buttons */
 .form-calif input[type="radio"] {
-  display: none;
   /* Oculta los radio buttons por defecto */
+  display: none;
 }
 
 /* Estilo para las etiquetas de los radio buttons */
 .form-calif label {
-  display: block;
   /* Cambia las etiquetas a bloques para colocarlas una debajo de la otra */
-  margin-bottom: 10px;
+  display: block;
   /* Espacio inferior entre las etiquetas para separarlas */
-  cursor: pointer;
+  margin-bottom: 10px;
   /* Cambia el cursor al pasar sobre las etiquetas */
+  cursor: pointer;
   font-weight: bold;
 }
 
 /* Estilo para las etiquetas cuando están seleccionadas */
 .form-calif input[type="radio"]:checked + label {
-  font-weight: bold;
   /* Texto en negrita cuando están seleccionadas */
-  color: rgb(198, 237, 23);
+  font-weight: bold;
   /* Cambia el color del texto cuando están seleccionadas */
+  color: rgb(198, 237, 23);
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;
 }
@@ -605,31 +629,116 @@ nav a {
 
 .form-button input[type="submit"],
 .form-button button[type="button"] {
-  background-color: #ffffff;
   /* Fondo blanco */
-  border: 1px solid #000000;
+  background-color: #ffffff;
   /* Borde negro */
-  border-radius: 5px;
+  border: 1px solid #000000;
   /* Bordes redondeados */
-  padding: 10px 20px;
+  border-radius: 5px;
   /* Espaciado interno */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
   /* Sombra para el efecto relieve */
-  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   /* Cambia el cursor al pasar por encima */
-  font-weight: bold;
+  cursor: pointer;
   /* Texto en negrita */
-  color: #000000;
+  font-weight: bold;
   /* Color del texto */
-  transition: all 0.3s ease;
+  color: #000000;
   /* Transición suave */
+  transition: all 0.3s ease;
 }
 
 /* Estilos para el hover (cuando el cursor pasa por encima) */
 .form-button input[type="submit"]:hover,
 .form-button button[type="button"]:hover {
-  background-color: #f2f2f2;
   /* Cambia el fondo a un tono más claro */
+  background-color: #f2f2f2;
+}
+
+/* --------------------------- */
+/* FOOTER CON GRID E ICONOS SN */
+/* --------------------------- */
+footer {
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  /* Fuente Roboto */
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  /* 12 columnas de tamaño igual */
+  grid-template-columns: repeat(12, 1fr);
+  /* Espacio entre las secciones */
+  gap: 20px;
+}
+
+/* Estilos para las secciones del footer */
+.section-footer {
+  /* Ocupa todas las columnas disponibles */
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: 1fr;
+  /* Espacio entre las secciones */
+  gap: 20px;
+}
+
+.contacto,
+.redes-sociales,
+.derechos {
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  /* Fondo gris semi-transparente */
+  background-color: rgba(97, 95, 95, 0.5);
+  /* Color del texto blanco */
+  color: white;
+  /* Efecto de brillo */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.contacto a {
+  color: #fff;
+}
+
+.redes-sociales a {
+  display: inline-block;
+  /* Espacio entre enlaces */
+  margin: 10px 15px 0;
+  color: #020202;
+}
+
+.redes-sociales a:hover {
+  /* Cambiar color al pasar el mouse */
+  color: #ef3311;
+}
+
+/* Redefinir el tamaño de los iconos de redes sociales */
+.redes-sociales a img {
+  width: 30px; /* Ajusta el ancho de los iconos */
+  height: auto; /* Mantiene la proporción de aspecto */
+}
+
+.redes-sociales {
+  /* Centra horizontalmente */
+  justify-content: center; 
+}
+
+#contacto h2,
+#redes-sociales h2 {
+  /* Eliminar margen superior */
+  margin-top: 0;
+}
+
+#derechos {
+  /* Ajusta el tamaño del texto según tus preferencias */
+  font-size: 0.9em;
+  /* Color del texto blanco */
+  color: rgb(14, 13, 7);
+  font-weight: bold;
+  /* Usando Nunito como la fuente principal */
+  font-family: "Nunito", sans-serif;
 }
 
 /* ------------------------------------------------------------- */
@@ -707,16 +816,15 @@ nav a {
   .receta-estrella-col {
     padding: 0px;
   }
-  
+
   .receta-estrella-col1 {
     order: 1;
     align-items: center;
   }
-  
+
   .receta-estrella-col2 {
     align-items: center;
   }
-  
 
   /* ---------- Footer ---------- */
 }
@@ -802,86 +910,3 @@ nav a {
   /* ---------- Footer ---------- */
 }
 /* ------------------------------------------------------------- */
-
-/* --------------------------- */
-/* FOOTER CON GRID E ICONOS SN */
-footer {
-  color: #333;
-  padding: 20px;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  /* Fuente Roboto */
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  /* 12 columnas de tamaño igual */
-  gap: 20px;
-  /* Espacio entre las secciones */
-}
-
-/* Estilos para las secciones del footer */
-.section-footer {
-  display: grid;
-  /* Ocupa todas las columnas disponibles */
-  grid-column: 1 / -1;
-  grid-template-columns: 1fr;
-  /* Espacio entre las secciones */
-  gap: 20px;
-}
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-/* !!!!!!!!!!!!!!!!!!!!!!!!! ORDENAR ESTO !!!!!!!!!!!!!!!!!!!!!!!!! */
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-.contacto,
-.redes-sociales,
-.derechos {
-  padding: 20px;
-  border-radius: 10px;
-  margin: 0;
-  font-size: 1.1em;
-  font-weight: bold;
-  /* Fondo gris semi-transparente */
-  background-color: rgba(97, 95, 95, 0.5);
-  /* Color del texto blanco */
-  color: white;
-  /* Efecto de brillo */
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
-}
-
-.redes-sociales a {
-  display: inline-block;
-  margin: 10px 15px 0;
-  /* Espacio entre enlaces */
-  color: #020202;
-}
-
-.redes-sociales a:hover {
-  color: #ef3311;
-  /* Cambiar color al pasar el mouse */
-}
-
-/* Redefinir el tamaño de los iconos de redes sociales */
-.redes-sociales a img {
-  width: 30px; /* Ajusta el ancho de los iconos */
-  height: auto; /* Mantiene la proporción de aspecto */
-}
-
-/* Centrar los iconos de redes sociales */
-.redes-sociales {
-  justify-content: center; /* Centra horizontalmente */
-}
-
-#contacto h2,
-#redes-sociales h2 {
-  margin-top: 0;
-  /* Eliminar margen superior */
-}
-
-#derechos {
-  font-size: 0.9em;
-  /* Ajusta el tamaño del texto según tus preferencias */
-  color: rgb(14, 13, 7);
-  /* Color del texto blanco */
-  font-weight: bold;
-  font-family: "Nunito", sans-serif;
-  /* Usando Nunito como la fuente principal */
-}
