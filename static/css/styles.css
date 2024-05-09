@@ -636,7 +636,7 @@ form .boton-calificar button:hover{
 
 .form-name input[type="text"] {
   /* El input ocupará todo el ancho disponible */
-  width: 50%;
+  width: 100%;
   /* Espaciado interior para el input */
   padding: 8px;
   /* Borde para el input */
@@ -661,7 +661,7 @@ form .boton-calificar button:hover{
 
 .form-email input[type="email"] {
   /* El input ocupará todo el ancho disponible */
-  width: 50%;
+  width: 100%;
   /* Espaciado interior para el input */
   padding: 8px;
   /* Borde para el input */
@@ -686,7 +686,7 @@ form .boton-calificar button:hover{
 
 .form-message textarea {
   /* El textarea ocupará todo el ancho disponible */
-  width: 50%;
+  width: 100%;
   /* Espaciado interior para el textarea */
   padding: 8px;
   /* Borde para el textarea */
@@ -695,7 +695,7 @@ form .boton-calificar button:hover{
 
 .form-motivo {
   /* Espacio entre el formulario y el siguiente elemento */
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .form-motivo label {
@@ -711,7 +711,7 @@ form .boton-calificar button:hover{
 
 .form-motivo textarea {
   /* El textarea ocupará todo el ancho disponible */
-  width: 50%;
+  width: 90%;
   /* Espaciado interior para el textarea */
   padding: 8px;
   /* Borde para el textarea */
@@ -762,6 +762,7 @@ form .boton-calificar button:hover{
 
 .form-button input[type="submit"],
 .form-button button[type="button"] {
+  margin-top: 15px;
   /* Fondo blanco */
   background-color: #ffffff;
   /* Borde negro */
