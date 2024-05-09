@@ -598,8 +598,12 @@ form .boton-calificar button:hover{
   background-color: #222222;
   border-radius: 15px;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
-  padding: 15px;
+  padding: 29px;
   gap: 5px;
+}
+
+.tarjeta-equipo h3 {
+  margin: 6px 0;
 }
 
 .tarjeta-equipo img {
@@ -608,6 +612,7 @@ form .boton-calificar button:hover{
 
 .tarjeta-equipo p {
   color: var(--text1);
+  margin: 10px 0;
 }
 
 /* -------------------------------------------------------- */
