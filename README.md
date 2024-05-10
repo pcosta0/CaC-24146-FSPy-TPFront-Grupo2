@@ -1,10 +1,8 @@
 # Codo a Codo 2024 - Curso Fullstack Python 
+Curso destinado a personas con experiencia previa en programación que aspiren a dominar uno de los lenguajes más demandados en el mercado. Durante el curso, se explorarán las mejores prácticas del diseño web adaptable, empleando HTML, CSS y Javascript. Además, se adquirirán competencias en el manejo de bases de datos y en el desarrollo de aplicaciones web sólidas, dinámicas y escalables. Al concluir el programa, se estará capacitado para desempeñarse como Desarrollador Full Stack en Python. El curso está dividido en dos estapas: Frontend y Backend.
 
-## Desarrollo Web HTML, CSS y JavaScript
-El curso está dividido en dos estapas: Frontend y Backend. 
-
-### Trabajo Práctico Frontend
-El objetivo del trabajo práctico es demostrar el conocimiento adquirido en la primer etapa del curso enfocada al frontend.
+## Trabajo práctico: Desarrollo Web HTML, CSS y JavaScript
+En este proyecto práctico, se aplicarán los conocimientos adquiridos en diseño web para desarrollar el frontend de una plataforma de recetas de comidas. Se trabajará en la creación de una interfaz de usuario atractiva y funcional utilizando HTML, CSS y Javascript. Se implementarán técnicas de diseño responsivo para garantizar una experiencia de usuario óptima en diferentes dispositivos. Además, se integrarán elementos interactivos y dinámicos para mejorar la usabilidad del sitio. Este trabajo permitirá demostrar habilidades en el desarrollo de frontend y en la creación de interfaces web modernas y efectivas.
 
 ### Criterios de evaluación
 - El sitio web debe poseer al menos 4 páginas HTML o 4 secciones si se trata de un sitio One Page.
