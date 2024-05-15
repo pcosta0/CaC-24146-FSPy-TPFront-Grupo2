@@ -58,34 +58,33 @@
       <section id="form-contacto" class="container">
         <h2>Formulario de Contacto</h2>
         <h3>Complete sus datos y le responderemos a la brevedad</h3>
-        <br />
-        
-        <form id="contactForm" onsubmit="return validateForm()" novalidate>
-        
-          <div class="form-group">
-            <section class="form-name">
-              <label for="name">Nombre:</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Nombre y Apellido"
-                required=""
-              />
-            </section>
-          </div>
+        <div class="formulario-contacto">
+          <form id="contactForm" onsubmit="return validateForm()" novalidate>
+            <div class="form-group">
+              <section class="form-name">
+                <label for="name">Nombre:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Nombre y Apellido"
+                  required=""
+                />
+              </section>
+            </div>
 
-          <div class="form-group">
-            <section class="form-email">
-              <label for="email">Correo electrónico:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Direccion de correo"
-                required=""
-              />
-            </section>
+            <div class="form-group">
+              <section class="form-email">
+                <label for="email">Correo electrónico:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Direccion de correo"
+                  required=""
+                />
+              </section>
+            </div>
 
             <div class="form-group">
               <section class="form-message">
@@ -99,127 +98,110 @@
                   required=""
                 ></textarea>
               </section>
-
-              <div class="form-group">
-                <section class="form-motivo">
-                  <label for="motivo">Motivo:</label>
-                  <select id="motivo" name="motivo" required="">
-                    <option value="" selected="selected">
-                      Seleccione el motivo
-                    </option>
-                    <option value="recetas">Consultas sobre recetas</option>
-                    <option value="ingredientes">
-                      Consultas sobre Ingredientes
-                    </option>
-                    <option value="nueva">Sugerir una receta</option>
-                    <option value="sugerencias">
-                      Comentarios y sugerencias
-                    </option>
-                    <option value="otros">Otros Motivos</option>
-                  </select>
-                </section>
-              </div>
-
-              <h4 class="form-calif-preg">
-                ¿Cómo calificarías tu experiencia en nuestro sitio web?
-              </h4>
-
-              <section class="form-calif">
-                <input
-                  type="radio"
-                  id="muy_satisfecho"
-                  name="experiencia"
-                  value="muy_satisfecho"
-                />
-                <label for="muy_satisfecho">Muy satisfecho</label>
-
-                <input
-                  type="radio"
-                  id="satisfecho"
-                  name="experiencia"
-                  value="satisfecho"
-                />
-                <label for="satisfecho">Satisfecho</label>
-
-                <input
-                  type="radio"
-                  id="neutral"
-                  name="experiencia"
-                  value="neutral"
-                />
-                <label for="neutral">Neutral</label>
-
-                <input
-                  type="radio"
-                  id="insatisfecho"
-                  name="experiencia"
-                  value="insatisfecho"
-                  checked="checked"
-                />
-                <label for="insatisfecho">Insatisfecho</label>
-
-                <input
-                  type="radio"
-                  id="muy_insatisfecho"
-                  name="experiencia"
-                  value="muy_insatisfecho"
-                />
-                <label for="muy_insatisfecho">Muy insatisfecho</label>
-              </section>
-
-              <div class="form-group">
-                <label for="suscripcion">Suscribirse:</label>
-                <input
-                  type="checkbox"
-                  id="suscripcion"
-                  name="suscripcion"
-                  value="si"
-                />
-                <label for="suscripcion"
-                  >Deseo recibir correos electrónicos</label
-                >
-              </div>
-
-              <div class="form-group">
-                <section class="form-button">
-                  <input type="submit" value="Enviar" />
-                  <button type="button" onclick="clearForm()">Borrar</button>
-                </section>
-              </div>
-
-              
             </div>
-          </div>
-        </form>
+
+            <div class="form-group">
+              <section class="form-motivo">
+                <label for="motivo">Motivo:</label>
+                <select id="motivo" name="motivo" required="">
+                  <option value="" selected="selected">
+                    Seleccione el motivo
+                  </option>
+                  <option value="recetas">Consultas sobre recetas</option>
+                  <option value="ingredientes">
+                    Consultas sobre Ingredientes
+                  </option>
+                  <option value="nueva">Sugerir una receta</option>
+                  <option value="sugerencias">Comentarios y sugerencias</option>
+                  <option value="otros">Otros Motivos</option>
+                </select>
+              </section>
+            </div>
+
+            <div class="form-group">
+              <label for="radio-1">¿Cómo calificarías tu experiencia en nuestro sitio web?:</label>
+              <section class="form-calificacion">
+                <div class="radio">
+                  <input id="muy_satisfecho" name="radio" type="radio" checked/>
+                  <label for="muy_satisfecho" class="radio-label">Muy satisfecho</label>
+                </div>
+
+                <div class="radio">
+                  <input id="satisfecho" name="radio" type="radio" />
+                  <label for="satisfecho" class="radio-label">Satisfecho</label>
+                </div>
+
+                <div class="radio">
+                  <input id="neutral" name="radio" type="radio"  />
+                  <label for="neutral" class="radio-label">Neutral</label>
+                </div>
+
+                <div class="radio">
+                  <input id="insatisfecho" name="radio" type="radio"  />
+                  <label for="insatisfecho" class="radio-label">Insatisfecho</label>
+                </div>
+
+                <div class="radio">
+                  <input id="muy_insatisfecho" name="radio" type="radio" />
+                  <label for="muy_insatisfecho" class="radio-label">Muy insatisfecho</label>
+                </div>
+              </section>
+            </div>
+
+            <div class="form-group suscripcion">
+              <label for="suscripcion">Suscribirse:</label>
+              <input
+                type="checkbox"
+                id="suscripcion"
+                name="suscripcion"
+                value="si"
+              />
+              <label for="suscripcion"
+                >Deseo recibir correos electrónicos</label
+              >
+            </div>
+
+            <div class="form-group botones">
+              <section class="form-button">
+                <input type="submit" value="Enviar" />
+                <button type="button" onclick="clearForm()">Borrar</button>
+              </section>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
 
     <footer>
       <section class="grid-footer section-footer">
-        <div class="grid-item contacto">
-          <h2>Contacto</h2>
-          <a href="mailto:contacto@cocinandoenequipo.com">Email: contacto@cocinandoenequipo.com</a>
-          <p><a href="tel:123456789">Teléfono: 123-456-789</a></p>
-        </div>
-
-        <div class="grid-item redes-sociales">
-          <h2>Síguenos en Redes Sociales</h2>
-          <!-- Enlaces a redes sociales -->
-          <a href="#"
-            ><img src="static/img/iconSN/twitter.png" alt="Twitter"
-          /></a>
-          <a href="#"
-            ><img src="static/img/iconSN/instagram.png" alt="Instagram"
-          /></a>
-          <a href="#"
-            ><img src="static/img/iconSN/facebook.png" alt="Facebook"
-          /></a>
-          <a href="#"
-            ><img src="static/img/iconSN/tik-tok.png" alt="TikTok"
-          /></a>
-        </div>
-        <div class="grid-item derechos">
-          <p>&copy; 2024 Cocinando en Equipo. Todos los derechos reservados.</p>
+        <div class="grid-item contacto redes-sociales">
+          <div>
+            <h2>Contacto</h2>
+            <a href="mailto:contacto@cocinandoenequipo.com"
+              >Email: contacto@cocinandoenequipo.com</a
+            >
+            <p><a href="tel:123456789">Teléfono: 123-456-789</a></p>
+          </div>
+          <div>
+            <!-- Enlaces a redes sociales -->
+            <a href="#"
+              ><img src="static/img/iconSN/twitter.png" alt="Twitter"
+            /></a>
+            <a href="#"
+              ><img src="static/img/iconSN/instagram.png" alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img src="static/img/iconSN/facebook.png" alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img src="static/img/iconSN/tik-tok.png" alt="TikTok"
+            /></a>
+          </div>
+          <div>
+            <p>
+              &copy; 2024 Cocinando en Equipo. Todos los derechos reservados.
+            </p>
+          </div>
         </div>
       </section>
     </footer>
