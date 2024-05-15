@@ -6,7 +6,7 @@
   --header-bg: #292929;
   --footer-bg: #e7a412;
   --menu-bg: #b1801e;
-  --menu-bg2: #615f5b;
+  --menu-bg2: #3d3c3a;
   --heading1: #ffbb00;
   --heading2: #f8e8bb;
   --text1: #fcfcfc;
@@ -43,14 +43,15 @@ a {
 
 /* Estilos generales */
 .estilo-body {
-  background-image: url("../img/fondo1.jpg");
   /* Ruta a tu imagen de fondo */
-  background-position: center;
+  background-image: url("../img/fondo1.jpg");
   /* Centra la imagen */
-  background-repeat: no-repeat;
+  background-position: center;
   /* Evita que la imagen se repita */
-  background-size: cover;
+  background-repeat: no-repeat;
   /* Ajusta la imagen al tamaño de la ventana del navegador */
+  background-size: cover;
+  backdrop-filter: blur(20px) brightness(1.1);
 }
 
 #subir {
@@ -81,7 +82,7 @@ header {
 header h1 {
   color: var(--heading1);
   font-weight: 600;
-  font-size: min(max(16px, 4vw), 22px);
+  font-size: min(max(26px, 4vw), 28px);
 }
 
 /* contenedor de logo */
@@ -155,10 +156,12 @@ nav a {
 /* -------------------------- */
 .container {
   background-color: rgba(255, 255, 255, 0.425);
+  background-color: rgba(255, 255, 255, 0.7);
   margin: 9px 9px 0px;
   padding: 15px 15px;
   border-radius: 10px;
-  backdrop-filter: blur(5px);
+  line-height: 1.6em;
+  /* backdrop-filter: blur(5px); */
 }
 
 .container p {
@@ -168,8 +171,8 @@ nav a {
 .container h2 {
   color: var(--heading1);
   font-weight: 700;
-  font-size: 1.8rem;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8), 0 1px 5px rgba(0, 0, 0, 0.5);
+  font-size: 1.4rem;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 0.8);
   padding-bottom: 20px;
 }
 
@@ -260,11 +263,11 @@ nav a {
   justify-content: flex-start;
   flex-direction: column;
   gap: 10px;
-  backdrop-filter: blur(7px);
+  /* backdrop-filter: blur(7px); */
 }
 
 .titulo-pop {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 900;
   color: #000;
 }
@@ -366,7 +369,7 @@ nav a {
 }
 
 .tarjeta-est {
-  border: 1px solid #666;
+  /* border: 1px solid #666; */
   padding: 10px;
   margin-bottom: 15px;
   width: 50%;
@@ -430,11 +433,11 @@ td {
   flex-direction: column;
 }
 
-.container .comentar{
+.container .comentar {
   display: none;
 }
 
-.agradecimiento{
+.agradecimiento {
   font-size: 25px;
   color: #111;
   font-weight: 500;
@@ -456,11 +459,11 @@ td {
   text-decoration: underline;
 } */
 
-.container-estrella .estrella-widget input{
+.container-estrella .estrella-widget input {
   display: none;
 }
 
-.estrella-widget label{
+.estrella-widget label {
   font-size: 35px;
   color: gray;
   padding: 10px;
@@ -469,35 +472,35 @@ td {
 }
 
 input:not(:checked) ~ label:hover,
-input:not(:checked) ~ label:hover ~ label{
+input:not(:checked) ~ label:hover ~ label {
   color: yellow;
 }
 
-input:checked ~ label{
+input:checked ~ label {
   color: yellow;
 }
 
-input#calificar-5:checked ~ label{
+input#calificar-5:checked ~ label {
   color: rgb(255, 255, 4);
   text-shadow: 0 0 20px #952;
 }
 
 /* revisar los dos siguientes*/
-.container-estrella form{
+.container-estrella form {
   display: none;
 }
 
-input:checked ~ form{
+input:checked ~ form {
   display: block;
 }
 
-form .area-comentario{
+form .area-comentario {
   height: 100px;
   width: 100%;
   overflow: hidden;
 }
 
-form .area-comentario textarea{
+form .area-comentario textarea {
   height: 100%;
   width: 100%;
   outline: none;
@@ -510,18 +513,18 @@ form .area-comentario textarea{
   border-radius: 10px;
 }
 
-form .boton-calificar{
+form .boton-calificar {
   height: 45px;
   width: 100%;
   margin: 15px 0;
 }
 
-form .boton-calificar button{
+form .boton-calificar button {
   height: 100%;
   width: 100%;
   border: 1px solid black;
   outline: none;
-  background:white;
+  background: white;
   color: black;
   font-size: 17px;
   font-weight: 1000;
@@ -531,10 +534,9 @@ form .boton-calificar button{
   transition: all 0.3s ease;
 }
 
-form .boton-calificar button:hover{
+form .boton-calificar button:hover {
   background: rgb(255, 255, 4);
 }
-
 
 /* ----------------------------------------------------------- */
 /* ----------------------- Testimonios ----------------------- */
@@ -558,10 +560,26 @@ form .boton-calificar button:hover{
 .testimonial img {
   width: 130px;
   height: 130px;
-  border-radius: 50%;
   margin-right: 20px;
+  border-radius: 50%;
   /* Añade un borde negro fino */
   border: 2px solid black;
+}
+
+.testimonial .texto {
+  border-radius: 10px;
+  /* Color de fondo para resaltar */
+  background-color: #f9f9f9;
+}
+
+.testimonial .leer-mas { 
+  border-radius: 0 0 10px 10px;
+  width: 100%; 
+  text-align: center; 
+  margin-top: 5px; 
+  padding: 8px 20px; 
+  background-color: #f3f3f3;
+  /* background-image: linear-gradient(to bottom, transparent, #c5c5c5); */
 }
 
 .testimonial p {
@@ -573,10 +591,11 @@ form .boton-calificar button:hover{
   margin: 0;
   /* Agregar espacio interno */
   padding: 10px;
-  /* Color de fondo para resaltar */
-  background-color: #f9f9f9;
   /* Bordes redondeados */
   border-radius: 10px;
+  max-height: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 /* -------------------------------------------- */
@@ -603,7 +622,7 @@ form .boton-calificar button:hover{
 }
 
 .tarjeta-equipo h3 {
-  margin: 6px 0 ;
+  margin: 6px 0;
 }
 
 .tarjeta-equipo img {
@@ -622,184 +641,90 @@ form .boton-calificar button:hover{
 /* -------------------------------------------------------- */
 /* ---------------- Formulario de contacto ---------------- */
 /* -------------------------------------------------------- */
-.form-name {
-  /* Espacio entre el formulario y el siguiente elemento */
-  margin-bottom: 10px;
+.form-group{
+  margin: 10px 0;
 }
 
-.form-name label {
-  /* Hacer que el label ocupe todo el ancho disponible */
-  display: block;
-  font-weight: bold;
-  color: yellow;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black;
-  /* Espacio entre el label y el input */
-  margin-bottom: 5px;
+.formulario-contacto{
+  display: flex;
+  justify-content: center;
 }
 
-.form-name input[type="text"] {
-  /* El input ocupará todo el ancho disponible */
+#contactForm{
+  width: 600px;
+}
+
+.formulario-contacto label{
+  color: var(--heading1);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.formulario-contacto input{
   width: 100%;
-  /* Espaciado interior para el input */
+  margin-top: 7px;
   padding: 8px;
-  /* Borde para el input */
   border: 1px solid #ccc;
 }
 
-.form-email {
-  /* Espacio entre el formulario y el siguiente elemento */
-  margin-bottom: 10px;
-}
-
-.form-email label {
-  /* Hacer que el label ocupe todo el ancho disponible */
-  display: block;
-  font-weight: bold;
-  color: yellow;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black;
-  /* Espacio entre el label y el input */
-  margin-bottom: 5px;
-}
-
-.form-email input[type="email"] {
-  /* El input ocupará todo el ancho disponible */
+.formulario-contacto select{
+  margin-top: 7px;
   width: 100%;
-  /* Espaciado interior para el input */
   padding: 8px;
-  /* Borde para el input */
   border: 1px solid #ccc;
+  background: #fff;
 }
 
-.form-message {
-  /* Espacio entre el formulario y el siguiente elemento */
-  margin-bottom: 10px;
+.formulario-contacto .radio{
+  padding: 3px ;
+  background: #fff;
 }
 
-.form-message label {
-  /* Hacer que el label ocupe todo el ancho disponible */
-  display: block;
-  font-weight: bold;
-  color: yellow;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black;
-  /* Espacio entre el label y el textarea */
-  margin-bottom: 5px;
+.formulario-contacto input[type="radio"] {
+  width: 5%;
 }
 
-.form-message textarea {
-  /* El textarea ocupará todo el ancho disponible */
+.formulario-contacto textarea {
+  margin-top: 7px;
   width: 100%;
-  /* Espaciado interior para el textarea */
   padding: 8px;
-  /* Borde para el textarea */
   border: 1px solid #ccc;
 }
 
-.form-motivo {
-  /* Espacio entre el formulario y el siguiente elemento */
-  margin-bottom: 15px;
-}
-
-.form-motivo label {
-  /* Hacer que el label ocupe todo el ancho disponible */
-  display: block;
-  font-weight: bold;
-  color: yellow;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black;
-  /* Espacio entre el label y el textarea */
-  margin-bottom: 5px;
-}
-
-.form-motivo textarea {
-  /* El textarea ocupará todo el ancho disponible */
-  width: 90%;
-  /* Espaciado interior para el textarea */
-  padding: 8px;
-  /* Borde para el textarea */
+.formulario-contacto .form-calificacion {
+  margin-top: 7px;
   border: 1px solid #ccc;
 }
 
-/* Estilo para el contenedor de la sección */
-.form-calif {
-  /* Espacio inferior para separar de otros elementos */
-  margin-bottom: 20px;
+.formulario-contacto .suscripcion input[type="checkbox"]{
+  width: 5%;
 }
 
-/* Estilo para los radio buttons */
-.form-calif input[type="radio"] {
-  /* Oculta los radio buttons por defecto */
-  display: none;
+.botones{
+  text-align: right;
 }
 
-/* Estilo para las etiquetas de los radio buttons */
-.form-calif label {
-  /* Cambia las etiquetas a bloques para colocarlas una debajo de la otra */
-  display: block;
-  /* Espacio inferior entre las etiquetas para separarlas */
-  margin-bottom: 10px;
-  /* Cambia el cursor al pasar sobre las etiquetas */
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* Estilo para las etiquetas cuando están seleccionadas */
-.form-calif input[type="radio"]:checked + label {
-  /* Texto en negrita cuando están seleccionadas */
-  font-weight: bold;
-  /* Cambia el color del texto cuando están seleccionadas */
-  color: rgb(198, 237, 23);
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black;
-}
-
-.form-calif-preg {
-  /* Estilos específicos para el encabezado h3 */
-  font-weight: bold;
-  color: rgb(226, 226, 4);
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black;
-  margin-bottom: 5px;
-}
 
 .form-button input[type="submit"],
 .form-button button[type="button"] {
-  margin-top: 15px;
-  /* Fondo blanco */
+  width: 100px;
+  margin-top: 0px;
   background-color: #ffffff;
-  /* Borde negro */
   border: 1px solid #000000;
-  /* Bordes redondeados */
   border-radius: 5px;
-  /* Espaciado interno */
   padding: 10px 20px;
-  /* Sombra para el efecto relieve */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  /* Cambia el cursor al pasar por encima */
-  cursor: pointer;
-  /* Texto en negrita */
   font-weight: bold;
-  /* Color del texto */
   color: #000000;
-  /* Transición suave */
   transition: all 0.3s ease;
 }
 
-/* Estilos para el hover (cuando el cursor pasa por encima) */
-.form-button input[type="submit"]:hover,
-.form-button button[type="button"]:hover {
-  /* Cambia el fondo a un tono más claro */
-  background-color: #f2f2f2;
-}
 
 /* --------------------------- */
 /* FOOTER CON GRID E ICONOS SN */
 /* --------------------------- */
 footer {
   color: #333;
-  padding: 20px;
+  padding: 15px 10px;
   text-align: center;
   /* Fuente Roboto */
   font-family: "Roboto", sans-serif;
@@ -823,7 +748,7 @@ footer {
 .contacto,
 .redes-sociales,
 .derechos {
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   margin: 0;
   font-size: 1.1em;
@@ -840,11 +765,15 @@ footer {
   color: #fff;
 }
 
+.contacto div{
+  padding: 8px 0;
+}
+
 .redes-sociales a {
   display: inline-block;
   /* Espacio entre enlaces */
-  margin: 10px 15px 0;
-  color: #020202;
+  margin: 0 6px 0;
+  color: #fff;
 }
 
 .redes-sociales a:hover {
@@ -860,7 +789,7 @@ footer {
 
 .redes-sociales {
   /* Centra horizontalmente */
-  justify-content: center; 
+  justify-content: center;
 }
 
 #contacto h2,
@@ -964,7 +893,11 @@ footer {
     align-items: center;
   }
 
-  /* ---------- Footer ---------- */
+  /* ---------- contacto ---------- */
+  #contactForm{
+    width: 80%;
+  }
+  
 }
 
 /* ***************** Celular ***************** */
