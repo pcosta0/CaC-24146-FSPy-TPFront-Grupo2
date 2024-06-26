@@ -23,11 +23,11 @@ async function fetchData(url, method, data = null) {
     return await response.json();  // Devuelve la respuesta en formato JSON
   } catch (error) {
     console.error('Fetch error:', error);
-    alert('An error occurred while fetching data. Please try again.');
+    alert('Error obteniendo datos: \n' + error );
   }
 }  
 
-/**
+/** 
  * Funcion que permite crear un elemento <tr> para la tabla de peliculas
  * por medio del uso de template string de JS.
  */
