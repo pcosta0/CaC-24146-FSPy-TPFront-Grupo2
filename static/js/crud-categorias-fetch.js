@@ -1,4 +1,9 @@
-const BASEURL = "http://127.0.0.1:5000";
+let BASEURL = "http://127.0.0.1:5000";
+
+// Determina si la página esta alojada en githubpages
+function isRunningOnGitHubPages() {
+  return window.location.hostname.endsWith('.github.io');
+}
 
 /**
  * Función para realizar una petición fetch con JSON.
@@ -140,6 +145,9 @@ function deleteCategoria(id) {
 // Escuchar el evento 'DOMContentLoaded' que se dispara cuando el
 // contenido del DOM ha sido completamente cargado y parseado.
 document.addEventListener("DOMContentLoaded", function () {
+  if (isRunningOnGitHubPages()){
+    BASEURL = 'https://cac-24146-fspy-tpback-grupo2.onrender.com'
+  }
   const btnSaveCategoria = document.querySelector("#btn-save-categoria");
   // ASOCIAR UNA FUNCION AL EVENTO CLICK DEL BOTON
   btnSaveCategoria.addEventListener("click", saveCategoria);
