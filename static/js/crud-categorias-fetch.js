@@ -77,31 +77,24 @@ async function saveCategoria() {
     descripcion: descripcion,
     activo: activo,
   };
+  const formCategoria = document.querySelector("#form-categoria");
+  formCategoria.reset();
+  document.querySelector("#id_categoria").value = null;
   let result = null;
   // Si hay un idCategoria, realiza una petición PUT para actualizar la Categoria existente
   if (idCategoria !== "") {
-    result = await fetchData(
-      `${BASEURL}/api/categorias/${idCategoria}`,
-      "PUT",
-      CategoriaData
-    );
+    result = await fetchData(`${BASEURL}/api/categorias/${idCategoria}`,"PUT",CategoriaData );
   } else {
     // Si no hay idCategoria, realiza una petición POST para crear una nueva Categoria
-    result = await fetchData(
-      `${BASEURL}/api/categorias/`,
-      "POST",
-      CategoriaData
-    );
+    result = await fetchData(`${BASEURL}/api/categorias/`,"POST",CategoriaData);
   }
-  const formCategoria = document.querySelector("#form-categoria");
-  formCategoria.reset();
+  showCategorias();
   Swal.fire({
     title: "Exito!",
     text: result.message,
     icon: "success",
     confirmButtonText: "Cerrar",
   });
-  showCategorias();
 }
 
 /**
