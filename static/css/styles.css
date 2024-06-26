@@ -719,6 +719,33 @@ form .boton-calificar button:hover {
 }
 
 
+/* -------------------------------------------------------- */
+/* ---------------------- Categorias ---------------------- */
+/* -------------------------------------------------------- */
+.contenedor-tabla-categorias{
+  display: flex;
+  justify-content: center;
+}
+
+#tabla-categorias{
+  width: 600px;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+#tabla-categorias tr{
+  border-color: #ccc;
+}
+
+#tabla-categorias td, th{
+  border-color: #ccc;
+}
+
+#tabla-categorias td button{
+  border: none;
+}
+
 /* --------------------------- */
 /* FOOTER CON GRID E ICONOS SN */
 /* --------------------------- */
