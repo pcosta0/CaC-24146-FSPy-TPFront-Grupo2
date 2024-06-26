@@ -79,6 +79,7 @@ async function saveCategoria() {
   };
   const formCategoria = document.querySelector("#form-categoria");
   formCategoria.reset();
+  document.querySelector("#id_categoria").value = null;
   let result = null;
   // Si hay un idCategoria, realiza una petición PUT para actualizar la Categoria existente
   if (idCategoria !== "") {
