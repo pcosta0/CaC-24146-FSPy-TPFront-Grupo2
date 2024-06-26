@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categorias</title>
+    <link
+      rel="shortcut icon"
+      href="../static/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Enlaces a hojas de estilo CSS -->
+    <link rel="stylesheet" href="../static/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="estilo-body">
+    <div id="subir"></div>
+    <header>
+      <div class="logo-header">
+        <a href="index.html"
+          ><img src="../static/img/logo00.svg" alt="logo"
+        /></a>
+        <h1>Cocinando en Equipo</h1>
+      </div>
+
+      <div id="logo-subir">
+        <a href="#subir"
+          ><i class="fa-solid fa-circle-arrow-up fa-beat fa-2xl"></i
+        ></a>
+      </div>
+
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="menu-icon"> <img src="../static/img/menu.svg" alt="" /></i>
+        </label>
+        <ul id="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#categorias">Categorías</a></li>
+          <li><a href="index.html#populares">Populares</a></li>
+          <li><a href="testimonios.html">Testimonios</a></li>
+          <li><a href="quienesomos.html">Nosotros</a></li>
+          <li id="borde-lista-derecha"><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="form-contacto form-categorias" class="container">
+        <h2>Categoria</h2>
+
+        <div class="formulario-contacto">
+          <form id="form-categoria" action="">
+            <div class="form-group">
+              <section class="form-name">
+                <label for="name">Nombre:</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="name"
+                  placeholder="Nombre"
+                  required=""
+                />
+              </section>
+            </div>
+
+            <div class="form-group">
+              <section class="">
+                <label for="message">Descripcion:</label>
+                <textarea
+                  id="descripcion"
+                  name="descripcion"
+                  rows="2"
+                  cols="50"
+                  placeholder="Escriba aquí la descripcion"
+                  required=""
+                ></textarea>
+              </section>
+            </div>
+
+            <div class="form-group suscripcion">
+              <label for="activo">Activo:</label>
+              <input type="checkbox" id="activo" name="activo" value="si" />
+            </div>
+
+            <input type="hidden" id="id_categoria" name="id_categoria" />
+
+            <div class="form-group botones">
+              <section class="form-button">
+                <input type="submit" value="Guardar" id="btn-save-categoria" />
+                <button type="button" onclick="clearForm()">Borrar</button>
+              </section>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- tabla -->
+      <section id="list-table-categorias" class="container">
+        <h2 class="subtitle">Listado de categorias</h2>
+        <div class="contenedor-tabla-categorias">
+          <table id="tabla-categorias" class="table">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>activo</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section class="grid-footer section-footer">
+        <div class="grid-item contacto redes-sociales">
+          <div>
+            <h2>Contacto</h2>
+            <a href="mailto:contacto@cocinandoenequipo.com"
+              >Email: contacto@cocinandoenequipo.com</a
+            >
+            <p><a href="tel:123456789">Teléfono: 123-456-789</a></p>
+          </div>
+          <div>
+            <!-- Enlaces a redes sociales -->
+            <a href="#"
+              ><img src="../static/img/iconSN/twitter.png" alt="Twitter"
+            /></a>
+            <a href="#"
+              ><img src="../static/img/iconSN/instagram.png" alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img src="../static/img/iconSN/facebook.png" alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img src="../static/img/iconSN/tik-tok.png" alt="TikTok"
+            /></a>
+          </div>
+          <div>
+            <p>
+              &copy; 2024 Cocinando en Equipo. Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>"></script>
+    <script src="/static/js/crud-categorias-fetch.js"></script>
+  </body>
+</html>
