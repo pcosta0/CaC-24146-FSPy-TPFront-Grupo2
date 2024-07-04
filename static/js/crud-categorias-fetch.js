@@ -2,7 +2,7 @@ let BASEURL = "http://127.0.0.1:5000";
 
 // Determina si la página esta alojada en githubpages
 function isRunningOnGitHubPages() {
-  return window.location.hostname.endsWith('.github.io');
+  return window.location.hostname.endsWith(".github.io");
 }
 
 /**
@@ -14,25 +14,25 @@ function isRunningOnGitHubPages() {
  */
 async function fetchData(url, method, data = null) {
   const options = {
-      method: method,
-      headers: {
-          'Content-Type': 'application/json',
-      },
-      body: data ? JSON.stringify(data) : null,  // Si hay datos, los convierte a JSON y los incluye en el cuerpo
+    method: method,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: data ? JSON.stringify(data) : null, // Si hay datos, los convierte a JSON y los incluye en el cuerpo
   };
   try {
-    const response = await fetch(url, options);  // Realiza la petición fetch
+    const response = await fetch(url, options); // Realiza la petición fetch
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
     }
-    return await response.json();  // Devuelve la respuesta en formato JSON
+    return await response.json(); // Devuelve la respuesta en formato JSON
   } catch (error) {
-    console.error('Fetch error:', error);
-    alert('Error obteniendo datos: \n' + error );
+    console.error("Fetch error:", error);
+    alert("Error obteniendo datos: \n" + error);
   }
-}  
+}
 
-/** 
+/**
  * Funcion que permite crear un elemento <tr> para la tabla de peliculas
  * por medio del uso de template string de JS.
  */
@@ -88,10 +88,18 @@ async function saveCategoria() {
   let result = null;
   // Si hay un idCategoria, realiza una petición PUT para actualizar la Categoria existente
   if (idCategoria !== "") {
-    result = await fetchData(`${BASEURL}/api/categorias/${idCategoria}`,"PUT",CategoriaData );
+    result = await fetchData(
+      `${BASEURL}/api/categorias/${idCategoria}`,
+      "PUT",
+      CategoriaData
+    );
   } else {
     // Si no hay idCategoria, realiza una petición POST para crear una nueva Categoria
-    result = await fetchData(`${BASEURL}/api/categorias/`,"POST",CategoriaData);
+    result = await fetchData(
+      `${BASEURL}/api/categorias/`,
+      "POST",
+      CategoriaData
+    );
   }
   showCategorias();
   Swal.fire({
@@ -118,6 +126,8 @@ async function updateCategoria(id) {
   nombre.value = response.nombre;
   descripcion.value = response.descripcion;
   activo.checked = response.activo != 0;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  nombre.focus();
 }
 
 /**
@@ -130,6 +140,7 @@ function deleteCategoria(id) {
     title: "Esta seguro de eliminar la categoria?",
     showCancelButton: true,
     confirmButtonText: "Eliminar",
+    cancelButtonText: "Cancelar",
   }).then(async (result) => {
     if (result.isConfirmed) {
       let response = await fetchData(
@@ -142,14 +153,26 @@ function deleteCategoria(id) {
   });
 }
 
+/**
+ * Funcion para limpiar el formulario
+ */
+function limpiarFormulario() {
+  const formCategoria = document.querySelector("#form-categoria");
+  formCategoria.reset();
+  document.querySelector("#id_categoria").value = null;
+}
+
 // Escuchar el evento 'DOMContentLoaded' que se dispara cuando el
 // contenido del DOM ha sido completamente cargado y parseado.
 document.addEventListener("DOMContentLoaded", function () {
-  if (isRunningOnGitHubPages()){
-    BASEURL = 'https://cac-24146-fspy-tpback-grupo2.onrender.com'
+  // Determina si el front esta corriendo en githubpages para usar la API en linea
+  if (isRunningOnGitHubPages()) {
+    BASEURL = "https://cac-24146-fspy-tpback-grupo2.onrender.com";
   }
   const btnSaveCategoria = document.querySelector("#btn-save-categoria");
+  const btnLimpiarFormulario = document.querySelector("#btn-limpiar-formulario");
   // ASOCIAR UNA FUNCION AL EVENTO CLICK DEL BOTON
   btnSaveCategoria.addEventListener("click", saveCategoria);
+  btnLimpiarFormulario.addEventListener("click", limpiarFormulario);
   showCategorias();
 });
